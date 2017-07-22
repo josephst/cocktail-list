@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './App.css';
 
+import { DrinkList } from './drinklist/drinkList';
+
 const logo = require('./logo.svg');
 
 class App extends React.Component<{}, {}> {
@@ -14,6 +16,7 @@ class App extends React.Component<{}, {}> {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <DrinkList />
       </div>
     );
   }
