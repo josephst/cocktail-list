@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/drinks.json"
+      ],
+      "url": "./server/schemas/drinks.schema.json"
+    }
+  ]
+}
