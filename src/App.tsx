@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import { DrinkList } from './drinklist/drinkList';
+import { DrinkListContainer } from './drinklist/drinkListContainer';
 
 const logo = require('./logo.svg');
 
@@ -16,7 +16,7 @@ class App extends React.Component<{}, {}> {
         <p className="App-intro">
           Intro.
         </p>
-        <DrinkList />
+        <DrinkListContainer />
       </div>
     );
   }

@@ -4,5 +4,5 @@ import App from './App';
 
 it('renders without crashing', () => {
   const div = enzyme.shallow(<App />);
-  expect(div.find('h2').text()).toEqual('Welcome to React');
+  expect(div.find('h2').text()).toEqual('Cocktails');
 });
