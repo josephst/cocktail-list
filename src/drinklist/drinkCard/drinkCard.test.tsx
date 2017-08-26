@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { DrinkList } from './drinkList';
+import DrinkCard from './drinkCard';
 
-import { Drink } from './drink';
+import { Drink } from '../drink';
 
 const drink: Drink = {
   id: 1,
@@ -46,8 +46,15 @@ const drink: Drink = {
   'Add lime juice. Garnish with a lime wedge and serve'
 };
 
-it('should display a list of drinks', () => {
-  const multiple = 3;
-  const list = enzyme.shallow(<DrinkList drinks={new Array(multiple).fill(drink)} />);
-  expect(list.find('DrinkCard')).toHaveLength(multiple);
+it('should render', () => {
+  const card = enzyme.shallow(<DrinkCard drink={(drink)} />);
+  expect(card.exists());
+});
+
+it('should have information about the drink', () => {
+    const card = enzyme.shallow(<DrinkCard drink={(drink)} />);
+    expect(card.find('.drinkName')).toBeTruthy();
+    expect(card.find('.ingredientList')).toBeTruthy();
+    expect(card.find('.ingredientList li')).toHaveLength(drink.ingredients.length);
+    expect(card.find('.steps').text()).toBe(drink.steps);
 });

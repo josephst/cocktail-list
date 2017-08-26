@@ -27,7 +27,7 @@ class DrinkListContainer extends React.Component<{}, { drinks: Drink[] }> {
         throw new Error('Error occured while fetching list of drinks');
       })
       .then((res) => res.json())
-      .then((db) => this.setState({ drinks: db.drinks }))
+      .then((db: { drinks: Drink[] }) => this.setState({ drinks: db.drinks.sort((a, b) => a.name < b.name ? 0 : 1) }))
       .catch((err) => console.log(err));
   }
 }

@@ -52,10 +52,6 @@
         }
       },
       "required": ["name", "type", "quantity", "unit"]
-    },
-    "step": {
-      "description": "A step in making the drink",
-      "type": "string"
     }
   },
   "properties": {
@@ -96,10 +92,8 @@
             }
           },
           "steps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/step"
-            }
+            "type": "string",
+            "description": "Instructions to make the drink"
           }
         },
         "required": ["id", "default", "name", "hidden", "favorite", "details", "ingredients", "steps"]

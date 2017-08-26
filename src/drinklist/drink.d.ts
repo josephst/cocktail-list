@@ -5,36 +5,19 @@ export interface Drink {
     hidden: boolean,
     favorite: boolean,
     name: string,
-    ingredients: [{
-      name: string,
-      type: string,
-      quantity: number,
-      unit: string
-    },
-    {
-      name: string,
-      type: string,
-      quantity: number,
-      unit: string
-    },
-    {
-      name: string,
-      type: string,
-      quantity: number,
-      unit: string
-    },
-    {
-      name: string,
-      type: string,
-      quantity: number,
-      unit: null
-    }
-    ],
+    ingredients: Ingredient[],
     details: {
       category: string,
       color: string,
       glassType: string,
       ice: string
     },
-    steps: string[],
+    steps: string,
+}
+
+export interface Ingredient {
+  name: string,
+  type: string,
+  quantity: number,
+  unit?: string
 }

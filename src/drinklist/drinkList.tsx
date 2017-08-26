@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import * as React from 'react';
 
+import { DrinkCard } from './drinkCard';
+
 import { Drink } from './drink';
 
 interface DrinkListProps {
@@ -13,7 +15,7 @@ class DrinkList extends Component<DrinkListProps, {}> {
       <div>
         Drink list
         <ul>
-          {this.props.drinks.map((drink, index) => <li key={index}>{drink.name}</li>)}
+          {this.props.drinks.map((drink, index) => <li key={index}><DrinkCard drink={drink} /></li>)}
         </ul>
       </div>
     );
