@@ -5,7 +5,7 @@ import { DrinkListContainer } from './drinklist/drinkListContainer';
 
 const logo = require('./logo.svg');
 
-class App extends React.Component<{}, {}> {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
@@ -13,9 +13,6 @@ class App extends React.Component<{}, {}> {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Cocktails</h2>
         </div>
-        <p className="App-intro">
-          Intro.
-        </p>
         <DrinkListContainer />
       </div>
     );

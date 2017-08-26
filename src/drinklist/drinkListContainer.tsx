@@ -19,9 +19,16 @@ class DrinkListContainer extends React.Component<{}, { drinks: Drink[] }> {
   }
 
   componentDidMount() {
-    fetch('/api/drinks/')
+    fetch(`${process.env.PUBLIC_URL}/data/db.json`)
+      .then((res) => {
+        if (res.ok) {
+          return res;
+        }
+        throw new Error('Error occured while fetching list of drinks');
+      })
       .then((res) => res.json())
-      .then((drinkList) => this.setState({ drinks: drinkList }));
+      .then((db) => this.setState({ drinks: db.drinks }))
+      .catch((err) => console.log(err));
   }
 }
 

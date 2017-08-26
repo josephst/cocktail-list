@@ -5,7 +5,7 @@
       "fileMatch": [
         "/drinks.json"
       ],
-      "url": "./server/schemas/drinks.schema.json"
+      "url": "./schemas/drinks.schema.json"
     }
   ]
 }
