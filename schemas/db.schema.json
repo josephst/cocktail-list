@@ -30,17 +30,13 @@
       },
       "required": ["glassType", "ice", "color", "category"]
     },
-    "ingredient": {
+    "drink-ingredient": {
       "description": "An ingredient in the drink. May be a liquid component or a garnish",
       "type": "object",
       "properties": {
-        "name": {
-          "description": "Name of the ingredient",
-          "type": "string"
-        },
-        "type": {
-          "description": "Type of the ingredient (alcohol, garnish, etc.)",
-          "type": "string"
+        "ref": {
+          "type": "number",
+          "description": "ID of the ingredient"
         },
         "quantity": {
           "type": "number"
@@ -51,7 +47,7 @@
           "enum": ["oz", "mL", "cL", null]
         }
       },
-      "required": ["name", "type", "quantity", "unit"]
+      "required": ["ref", "quantity", "unit"]
     }
   },
   "properties": {
@@ -88,7 +84,7 @@
           "ingredients": {
             "type": "array",
             "items": {
-              "$ref": "#/definitions/ingredient"
+              "$ref": "#/definitions/drink-ingredient"
             }
           },
           "steps": {
@@ -97,6 +93,27 @@
           }
         },
         "required": ["id", "default", "name", "hidden", "favorite", "details", "ingredients", "steps"]
+      }
+    },
+    "ingredients": {
+      "description": "Details about ingredients",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the ingredient"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the ingredient (alcohol, mixer, garnish, etc.)"
+          }
+        },
+        "required": ["id", "name" , "type"]
       }
     }
   }

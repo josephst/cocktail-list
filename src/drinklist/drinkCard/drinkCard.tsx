@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Drink } from '../drink';
+import { Drink, Ingredient } from '../drink';
 
-const DrinkCard: React.SFC<{ drink: Drink }> = (props) => {
+const DrinkCard: React.SFC<{ drink: Drink, ingredients: Ingredient[] }> = (props) => {
     return (
         <div>
             <div>
@@ -12,11 +12,15 @@ const DrinkCard: React.SFC<{ drink: Drink }> = (props) => {
             <div>
                 <h4>Ingredients</h4>
                 <ul className="ingredientList">
-                    {props.drink.ingredients.map((ingredient, index) => (
-                        <li className="ingredient" key={index}>
-                            {ingredient.quantity} {ingredient.unit || ''} {ingredient.name}
-                        </li>))
+                    {props.drink.ingredients.map((ingredient) => {
+                        const ingDetail = props.ingredients.find((ing) => ing.id === ingredient.ref);
+                        return (
+                            <li className="ingredient" key={ingredient.ref}>
+                                {ingredient.quantity} {ingredient.unit ? `${ingredient.unit} ` : ''}
+                                {ingDetail ? ingDetail.name : 'Ingredient not found in DB'}
+                            </li>);
                     }
+                    )}
                 </ul>
                 <h4>Steps</h4>
                 <div className="steps">{props.drink.steps}</div>

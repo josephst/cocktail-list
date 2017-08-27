@@ -1,21 +1,22 @@
-import { Component } from 'react';
 import * as React from 'react';
 
 import { DrinkCard } from './drinkCard';
 
-import { Drink } from './drink';
+import { Drink, Ingredient } from './drink';
 
 interface DrinkListProps {
   drinks: Drink[];
+  ingredients: Ingredient[];
 }
 
-class DrinkList extends Component<DrinkListProps, {}> {
+class DrinkList extends React.Component<DrinkListProps, {}> {
   render() {
     return (
       <div>
-        Drink list
         <ul>
-          {this.props.drinks.map((drink, index) => <li key={index}><DrinkCard drink={drink} /></li>)}
+          {this.props.drinks.map((drink, index) =>
+            <li key={index}><DrinkCard drink={drink} ingredients={this.props.ingredients} /></li>)
+          }
         </ul>
       </div>
     );

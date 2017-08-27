@@ -2,19 +2,20 @@ import * as React from 'react';
 
 import { DrinkList } from './drinkList';
 
-import { Drink } from './drink';
+import { Drink, Ingredient } from './drink';
 
-class DrinkListContainer extends React.Component<{}, { drinks: Drink[] }> {
+class DrinkListContainer extends React.Component<{}, { drinks: Drink[], ingredients: Ingredient[] }> {
   constructor() {
     super();
     this.state = {
       drinks: [],
+      ingredients: [],
     };
   }
 
   render() {
     return (
-      <DrinkList drinks={this.state.drinks} />
+      <DrinkList drinks={this.state.drinks} ingredients={this.state.ingredients} />
     );
   }
 
@@ -27,7 +28,12 @@ class DrinkListContainer extends React.Component<{}, { drinks: Drink[] }> {
         throw new Error('Error occured while fetching list of drinks');
       })
       .then((res) => res.json())
-      .then((db: { drinks: Drink[] }) => this.setState({ drinks: db.drinks.sort((a, b) => a.name < b.name ? 0 : 1) }))
+      .then((db: { drinks: Drink[], ingredients: Ingredient[] }) =>
+        this.setState({
+          drinks: db.drinks.sort((a, b) => a.name < b.name ? 0 : 1),
+          ingredients: db.ingredients,
+        })
+      )
       .catch((err) => console.log(err));
   }
 }

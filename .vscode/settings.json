@@ -3,9 +3,9 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "/drinks.json"
+        "/public/data/db.json"
       ],
-      "url": "./schemas/drinks.schema.json"
+      "url": "./schemas/db.schema.json"
     }
   ]
 }

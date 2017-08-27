@@ -5,7 +5,12 @@ export interface Drink {
     hidden: boolean,
     favorite: boolean,
     name: string,
-    ingredients: Ingredient[],
+    ingredients: Array<{
+      // refers to the Ingredient interface
+      ref: number,
+      quantity: number,
+      unit?: string,
+    }>,
     details: {
       category: string,
       color: string,
@@ -16,8 +21,7 @@ export interface Drink {
 }
 
 export interface Ingredient {
+  id: number,
   name: string,
-  type: string,
-  quantity: number,
-  unit?: string
+  type: string
 }

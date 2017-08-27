@@ -1,33 +1,29 @@
 {
-  "drinks": [
-    {
+  "drinks": [{
     "id": 1,
     "default": true,
     "dateCreated": "2017-07-20",
     "hidden": false,
     "favorite": true,
     "name": "Gin and tonic",
-    "ingredients": [{
-        "name": "Gin",
-        "type": "Liquid",
+    "ingredients": [
+      {
+        "ref": 1,
         "quantity": 2,
         "unit": "oz"
       },
       {
-        "name": "Tonic",
-        "type": "Liquid",
+        "ref": 400,
         "quantity": 4,
         "unit": "oz"
       },
       {
-        "name": "Lime juice",
-        "type": "Liquid",
+        "ref": 200,
         "quantity": 0.5,
         "unit": "oz"
       },
       {
-        "name": "Lime wedge",
-        "type": "Garnish",
+        "ref": 600,
         "quantity": 1,
         "unit": null
       }
@@ -38,9 +34,7 @@
       "glassType": "Highball",
       "ice": "Cubes"
     },
-    "steps": [
-      "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
-    ]
+    "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
   }, {
     "id": 2,
     "default": true,
@@ -49,26 +43,22 @@
     "favorite": true,
     "name": "Moscow Mule",
     "ingredients": [{
-        "name": "Vodka",
-        "type": "Liquid",
+        "ref": 0,
         "quantity": 2,
         "unit": "oz"
       },
       {
-        "name": "Ginger Beer",
-        "type": "Liquid",
+        "ref": 401,
         "quantity": 4,
         "unit": "oz"
       },
       {
-        "name": "Lime juice",
-        "type": "Liquid",
+        "ref": 200,
         "quantity": 0.5,
         "unit": "oz"
       },
       {
-        "name": "Lime wedge",
-        "type": "Garnish",
+        "ref": 600,
         "quantity": 1,
         "unit": null
       }
@@ -79,9 +69,37 @@
       "glassType": "Highball",
       "ice": "Cubes"
     },
-    "steps": [
-      "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
-    ]
-  }
-]
+    "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
+  }],
+  "ingredients": [{
+      "id": 0,
+      "name": "Vodka",
+      "type": "Alcohol"
+    },
+    {
+      "id": 1,
+      "name": "Gin",
+      "type": "Alcohol"
+    },
+    {
+      "id": 200,
+      "name": "Lime juice",
+      "type": "Fruit juice"
+    },
+    {
+      "id": 400,
+      "name": "Tonic",
+      "type": "Mixer"
+    },
+    {
+      "id": 401,
+      "name": "Ginger Beer",
+      "type": "Mixer"
+    },
+    {
+      "id": 600,
+      "name": "Lime wedge",
+      "type": "Garnish"
+    }
+  ]
 }
