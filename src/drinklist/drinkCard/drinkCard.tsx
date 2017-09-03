@@ -6,12 +6,14 @@ import { Drink, Ingredient } from '../drink';
 
 const DrinkCard: React.SFC<{ drink: Drink, ingredients: Ingredient[] }> = (props) => {
     return (
-        <Card>
+        <Card expandable={true} initiallyExpanded={false} showExpandableButton={true}>
             <CardHeader
                 title={props.drink.name}
                 subtitle={props.drink.favorite ? 'Favorite!' : ''}
+                actAsExpander={true}
+                showExpandableButton={true}
             />
-            <CardText>
+            <CardText expandable={true}>
                 <h4>Ingredients</h4>
                 <List>
                     {props.drink.ingredients.map((ingredient) => {
@@ -19,7 +21,7 @@ const DrinkCard: React.SFC<{ drink: Drink, ingredients: Ingredient[] }> = (props
                         const text = `${ingredient.quantity} ${ingredient.unit ? ingredient.unit : ''}
                             ${ingDetail ? ingDetail.name : 'Ingredient not found in DB'}`;
                         return (
-                            <ListItem key={ingredient.ref} primaryText={text} />
+                            <ListItem key={ingredient.ref} primaryText={text} disabled={true} className="ingredient"/>
                         );
                     })}
                 </List>

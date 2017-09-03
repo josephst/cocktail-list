@@ -5,7 +5,7 @@ import './App.css';
 
 import { DrinkListContainer } from './drinklist/drinkListContainer';
 
-const logo = require('./logo.svg');
+// const logo = require('./logo.svg');
 
 class App extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class App extends React.Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            {/* <img src={logo} className="App-logo" alt="logo" /> */}
             <h2>Cocktails</h2>
           </div>
           <DrinkListContainer />
