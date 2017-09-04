@@ -1,4 +1,20 @@
 language: node_js
 node_js:
-  - "lts/*"
-  - "node"
+- "6"
+- "8"
+install: yarn install
+script:
+- echo "Running tests against $(node -v) ..."
+- yarn test
+before_deploy: yarn build
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "cocktails.josephstahl.com"
+  region: "us-east-2"
+  skip_cleanup: true
+  local_dir: build
+  on:
+    branch: master
+    node: 8
