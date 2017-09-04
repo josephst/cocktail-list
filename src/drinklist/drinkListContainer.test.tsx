@@ -22,6 +22,7 @@ it('should provide a list of drinks on successful network request', async () => 
 });
 
 it('should populate an error message on unsuccessful network request', async () => {
+  expect.assertions(1);
   window.fetch = jest.fn().mockReturnValueOnce(
     Promise.resolve(new Response(
       '',
