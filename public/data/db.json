@@ -4,7 +4,7 @@
     "default": true,
     "dateCreated": "2017-07-20",
     "hidden": false,
-    "favorite": false,
+    "favorite": true,
     "name": "Gin and tonic",
     "ingredients": [
       {
