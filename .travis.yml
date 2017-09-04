@@ -15,7 +15,10 @@ deploy:
   region: "us-east-2"
   skip_cleanup: true
   local_dir: build
-  cache_control: "max-age=3600: \"build/index.html build/data/db.json\""
+  cache_control:
+    - "max-age=3600": "build/index.html"
+    - "max-age=3600": "build/data/db.json"
+    - "no-cache"
   on:
     branch: master
     node: 8
