@@ -1,14 +1,13 @@
 language: node_js
 node_js:
 - "8"
-python:
-- "3.6"
 cache: yarn
 install: yarn install
 script:
 - echo "Running tests against $(node -v) ..."
 - yarn test
 before_deploy:
+- pip install urllib3[secure]
 - pip install awscli
 - yarn build
 - chmod +x scripts/*.sh
