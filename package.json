@@ -22,7 +22,6 @@
     "enzyme": "^2.9.1",
     "react-test-renderer": "^15.6.1"
   },
-  "homepage": "cocktails.josephstahl.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/josephst/cocktail-list"
