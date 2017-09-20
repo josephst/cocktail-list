@@ -19,7 +19,7 @@ class DrinkList extends React.Component<DrinkListProps, {}> {
     return (
       <div>
         <div className="DrinkList">
-          {this.props.drinks.map((drink, index) =>
+          {this.props.filteredDrinks.map((drink, index) =>
             <div key={index}><DrinkCard drink={drink} ingredients={this.props.ingredients} /></div>)
           }
         </div>

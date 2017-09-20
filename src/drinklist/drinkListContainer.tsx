@@ -1,11 +1,12 @@
 import * as React from 'react';
 
 import { DrinkList } from './drinkList';
+import { AutoCompleteDrinkSearch } from './search/search';
 
 import { Drink, Ingredient } from './drink';
 
 export interface DrinkListShared {
-  drinks: Drink[];
+  filteredDrinks: Drink[];
   ingredients: Ingredient[];
   networkError: {
     showError: boolean;
@@ -13,13 +14,16 @@ export interface DrinkListShared {
   };
 }
 
-interface DrinkListContainerState extends DrinkListShared { }
+interface DrinkListContainerState extends DrinkListShared {
+  allDrinks: Drink[];
+}
 
 class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
   constructor() {
     super();
     this.state = {
-      drinks: [],
+      filteredDrinks: [],
+      allDrinks: [],
       ingredients: [],
       networkError: {
         showError: false,
@@ -56,12 +60,18 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
 
   render() {
     return (
-      <DrinkList
-        drinks={this.state.drinks}
-        ingredients={this.state.ingredients}
-        networkError={this.state.networkError}
-        hideNetworkError={this.hideNetworkError}
-      />
+      <div>
+        <AutoCompleteDrinkSearch
+          drinkNames={this.state.allDrinks.map((drink) => drink.name)}
+          updateSearchTerm={this.filterDrinkList}
+        />
+        <DrinkList
+          filteredDrinks={this.state.filteredDrinks.length > 0 ? this.state.filteredDrinks : this.state.allDrinks}
+          ingredients={this.state.ingredients}
+          networkError={this.state.networkError}
+          hideNetworkError={this.hideNetworkError}
+        />
+      </div>
     );
   }
 
@@ -69,7 +79,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     this.fetchData()
       .then((data) => {
         this.setState({
-          drinks: data.drinks,
+          allDrinks: data.drinks,
           ingredients: data.ingredients,
           networkError: {
             showError: false,
@@ -79,7 +89,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
       })
       .catch((err) => {
         this.setState({
-          drinks: [],
+          allDrinks: [],
           ingredients: [],
           networkError: {
             message: err.message,
@@ -87,6 +97,14 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
           },
         });
       });
+  }
+
+  private filterDrinkList = (term: string) => {
+    if (term === '') {
+      this.setState({ filteredDrinks: this.state.allDrinks });
+    } else {
+      this.setState({ filteredDrinks: this.state.allDrinks.filter((drink) => drink.name === term) });
+    }
   }
 }
 

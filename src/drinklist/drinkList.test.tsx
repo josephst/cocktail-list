@@ -10,7 +10,7 @@ it('should display a list of drinks', () => {
   const multiple = 2;
   const list = enzyme.shallow(
     <DrinkList
-      drinks={new Array(multiple).fill(drink)}
+      filteredDrinks={new Array(multiple).fill(drink)}
       ingredients={[ingredient]}
       networkError={{ showError: false, message: '' }}
       hideNetworkError={() => false}
@@ -21,7 +21,7 @@ it('should display a list of drinks', () => {
 it('should display a snackbar', () => {
   const list = enzyme.shallow(
     <DrinkList
-      drinks={[]}
+      filteredDrinks={[]}
       ingredients={[]}
       networkError={{ showError: true, message: 'Test' }}
       hideNetworkError={() => false}
