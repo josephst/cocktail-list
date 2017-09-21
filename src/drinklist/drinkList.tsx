@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Snackbar from 'material-ui/Snackbar';
+import { Header, Modal } from 'semantic-ui-react';
 
 import { DrinkCard } from './drinkCard';
 import { DrinkListShared } from './drinkListContainer';
@@ -7,12 +7,12 @@ import { DrinkListShared } from './drinkListContainer';
 import './drinkList.css';
 
 interface DrinkListProps extends DrinkListShared {
-  hideNetworkError: () => void;
+  clearNetworkError: () => void;
 }
 
 class DrinkList extends React.Component<DrinkListProps, {}> {
   closeMessageBox = () => {
-    this.props.hideNetworkError();
+    this.props.clearNetworkError();
   }
 
   render() {
@@ -23,12 +23,16 @@ class DrinkList extends React.Component<DrinkListProps, {}> {
             <div key={index}><DrinkCard drink={drink} ingredients={this.props.ingredients} /></div>)
           }
         </div>
-        <Snackbar
+        <Modal
           open={this.props.networkError.showError}
-          message={this.props.networkError.message}
-          autoHideDuration={3000}
-          onRequestClose={this.closeMessageBox}
-        />
+          onClose={this.closeMessageBox}
+          basic={true}
+        >
+          <Header icon="warning" content="Network Error" />
+          <Modal.Content>
+            {this.props.networkError.message}
+          </Modal.Content>
+        </Modal>
       </div>
     );
   }

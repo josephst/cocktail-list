@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import Snackbar from 'material-ui/Snackbar';
+import { Modal } from 'semantic-ui-react';
 
 import { DrinkList } from './drinkList';
 
@@ -13,19 +13,19 @@ it('should display a list of drinks', () => {
       filteredDrinks={new Array(multiple).fill(drink)}
       ingredients={[ingredient]}
       networkError={{ showError: false, message: '' }}
-      hideNetworkError={() => false}
+      clearNetworkError={() => false}
     />);
   expect(list.find('DrinkCard')).toHaveLength(multiple);
 });
 
-it('should display a snackbar', () => {
+it('should display a modal', () => {
   const list = enzyme.shallow(
     <DrinkList
       filteredDrinks={[]}
       ingredients={[]}
       networkError={{ showError: true, message: 'Test' }}
-      hideNetworkError={() => false}
+      clearNetworkError={() => false}
     />
   );
-  expect(list.find(Snackbar)).toHaveLength(1);
+  expect(list.find(Modal)).toHaveLength(1);
 });

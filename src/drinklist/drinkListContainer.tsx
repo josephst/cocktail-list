@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { DrinkList } from './drinkList';
-import { DrinkFilter } from './search/search';
+import { DrinkFilter } from './search';
 
 import { Drink, Ingredient } from './drink';
 
@@ -32,7 +32,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     };
   }
 
-  hideNetworkError = () => {
+  clearNetworkError = () => {
     this.setState({
       networkError: {
         showError: false,
@@ -68,7 +68,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
           filteredDrinks={this.state.filteredDrinks.length > 0 ? this.state.filteredDrinks : this.state.allDrinks}
           ingredients={this.state.ingredients}
           networkError={this.state.networkError}
-          hideNetworkError={this.hideNetworkError}
+          clearNetworkError={this.clearNetworkError}
         />
       </div>
     );
