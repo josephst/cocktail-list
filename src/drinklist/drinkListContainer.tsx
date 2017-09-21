@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { DrinkList } from './drinkList';
-import { AutoCompleteDrinkSearch } from './search/search';
+import { DrinkFilter } from './search/search';
 
 import { Drink, Ingredient } from './drink';
 
@@ -61,8 +61,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
   render() {
     return (
       <div>
-        <AutoCompleteDrinkSearch
-          drinkNames={this.state.allDrinks.map((drink) => drink.name)}
+        <DrinkFilter
           updateSearchTerm={this.filterDrinkList}
         />
         <DrinkList
@@ -103,7 +102,9 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     if (term === '') {
       this.setState({ filteredDrinks: this.state.allDrinks });
     } else {
-      this.setState({ filteredDrinks: this.state.allDrinks.filter((drink) => drink.name === term) });
+      this.setState({
+        filteredDrinks: this.state.allDrinks.filter((drink) => drink.name.toLowerCase().indexOf(term) !== -1)
+      });
     }
   }
 }
