@@ -1,23 +1,27 @@
 import * as React from 'react';
-import { AutoComplete } from 'material-ui';
+import { TextField } from 'material-ui';
 
 export interface SearchProps {
-  drinkNames: string[];
   updateSearchTerm: (term: string) => void;
 }
 
-export class AutoCompleteDrinkSearch extends React.Component<SearchProps, {}> {
+export class DrinkFilter extends React.Component<SearchProps, {}> {
   constructor() {
     super();
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange(e: React.FormEvent<HTMLInputElement>) {
+    const target = e.target as HTMLInputElement;
+    const term = target.value || '';
+    this.props.updateSearchTerm(term.toLowerCase());
+  }
+
   render() {
     return (
-      <AutoComplete
+      <TextField
         hintText="Drink search"
-        dataSource={this.props.drinkNames}
-        onUpdateInput={this.props.updateSearchTerm}
-        filter={AutoComplete.fuzzyFilter}
-        maxSearchResults={5}
+        onChange={this.handleChange}
       />
     );
   }

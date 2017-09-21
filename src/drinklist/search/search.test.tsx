@@ -1,11 +1,9 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 
-import { AutoCompleteDrinkSearch } from './search';
-
-const drinks = ['drink1', 'drink2'];
+import { DrinkFilter } from './search';
 
 it('should render', () => {
-  const searchBox = enzyme.shallow(<AutoCompleteDrinkSearch drinkNames={drinks} updateSearchTerm={() => 42} />);
+  const searchBox = enzyme.shallow(<DrinkFilter updateSearchTerm={() => 42} />);
   expect(searchBox.exists());
 });
