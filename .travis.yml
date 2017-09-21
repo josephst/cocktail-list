@@ -8,7 +8,7 @@ script:
 - yarn test
 before_deploy:
 - pip install urllib3[secure]
-- pip install awscli
+- pip install awscli --upgrade --user
 - yarn build
 - chmod +x scripts/*.sh
 deploy:
