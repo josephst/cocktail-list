@@ -3,12 +3,12 @@ import * as enzyme from 'enzyme';
 
 import { DrinkListContainer } from './drinkListContainer';
 
-import { drink, ingredient } from '../fixtures';
+import { drink } from '../fixtures';
 
 it('should provide a list of drinks on successful network request', async () => {
   window.fetch = jest.fn().mockReturnValueOnce(
     Promise.resolve(new Response(
-      JSON.stringify({ drinks: [drink], ingredients: [ingredient] }),
+      JSON.stringify({ drinks: [drink] }),
       {
         headers: { 'Content-Type': 'application/json' },
         status: 200,
@@ -18,7 +18,6 @@ it('should provide a list of drinks on successful network request', async () => 
   const container = enzyme.shallow(<DrinkListContainer />);
   const data = await (container.instance() as DrinkListContainer).fetchData();
   expect(data.drinks).toHaveLength(1);
-  expect(data.ingredients).toHaveLength(1);
 });
 
 it('should populate an error message on unsuccessful network request', async () => {

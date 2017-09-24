@@ -6,8 +6,8 @@ export interface Drink {
     favorite: boolean,
     name: string,
     ingredients: Array<{
-      // refers to the Ingredient interface
-      ref: number,
+      name: string;
+      type: string;
       quantity: number,
       unit?: string,
     }>,
@@ -18,10 +18,4 @@ export interface Drink {
       ice: string
     },
     steps: string,
-}
-
-export interface Ingredient {
-  id: number,
-  name: string,
-  type: string
 }

@@ -1,3 +1,3 @@
-import DrinkCard from './drinkCard';
+import { DrinkListItem } from './drinkCard';
 
-export { DrinkCard };
+export { DrinkListItem };
