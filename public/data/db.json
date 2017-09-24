@@ -5,7 +5,7 @@
     "dateCreated": "2017-07-20",
     "hidden": false,
     "favorite": true,
-    "name": "Gin and tonic",
+    "name": "Gin and Tonic",
     "ingredients": [
       {
         "name": "Gin",
@@ -38,7 +38,7 @@
       "glassType": "Highball",
       "ice": "Cubes"
     },
-    "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
+    "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
   }, {
     "id": 2,
     "default": true,
@@ -77,6 +77,6 @@
       "glassType": "Highball",
       "ice": "Cubes"
     },
-    "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve"
+    "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
   }]
 }
