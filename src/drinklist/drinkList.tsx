@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { List, Grid, Segment } from 'semantic-ui-react';
-import { groupBy } from 'lodash';
+import { sortBy } from 'lodash';
 
 import { DrinkListItem } from './drinkCard';
 import { DrinkFilter } from './search';
@@ -36,8 +36,13 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
   }
 
   render() {
-    const categories: { [category: string]: Drink[] } =
-      groupBy(this.props.filteredDrinks, drink => drink.details.category);
+    const drinkItems = sortBy(this.props.filteredDrinks, (drink) => {
+      return [drink.details.category, drink.name];
+    }).map((drink) => {
+      return (
+        <DrinkListItem key={drink.id} drink={drink} updateSidebarView={this.handleDrinkSelection} />
+      );
+    });
     return (
       <Grid container={true}>
         <Grid.Row divided={true}>
@@ -47,20 +52,8 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
                 updateSearchTerm={this.props.applyDrinkFilter}
               />
             </Segment>
-            <List className="DrinkList" size={'huge'} relaxed={true} divided={true} selection={true}>
-              {Object.keys(categories).map((category, index) => {
-                const drinks = categories[category];
-                return (
-                  <List.Item key={index}>
-                    {category}
-                    <List>
-                      {drinks.map((drink) => (
-                        <DrinkListItem drink={drink} key={drink.id} updateSidebarView={this.handleDrinkSelection} />
-                      ))}
-                    </List>
-                  </List.Item>
-                );
-              })}
+            <List className="DrinkList" size={'huge'} relaxed={true} divided={false} selection={true}>
+              {drinkItems}
             </List>
           </Grid.Column>
           <Grid.Column width={4} floated="right">

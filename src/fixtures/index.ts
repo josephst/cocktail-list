@@ -1,3 +1,3 @@
-import { drink } from './drink';
+import { drink, makeDrink } from './drink';
 
-export { drink };
+export { drink, makeDrink };

@@ -24,9 +24,9 @@ export class DrinkListItem extends React.Component<DrinkListItemProps, {}> {
           <List.Header className="drinkName">
             <Icon name="star" />{this.props.drink.name}
           </List.Header>
-          {/* <List.Description>
+          <List.Description>
             {this.props.drink.details.category}
-          </List.Description> */}
+          </List.Description>
         </List.Content>
       </List.Item>
     );
