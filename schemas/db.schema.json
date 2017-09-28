@@ -34,12 +34,16 @@
       "description": "An ingredient in the drink. May be a liquid component or a garnish",
       "type": "object",
       "properties": {
-        "ref": {
-          "type": "number",
-          "description": "ID of the ingredient"
+        "name": {
+          "type": "string",
+          "description": "Name of the ingredient"
         },
         "quantity": {
           "type": "number"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of ingredient, such as garnish or mixer"
         },
         "unit": {
           "description": "Unit of measurment for the quantity. Can be null for unit measurements, such as a sugar cube",
@@ -47,7 +51,7 @@
           "enum": ["oz", "mL", "cL", null]
         }
       },
-      "required": ["ref", "quantity", "unit"]
+      "required": ["name", "type", "quantity", "unit"]
     }
   },
   "properties": {
@@ -93,27 +97,6 @@
           }
         },
         "required": ["id", "default", "name", "hidden", "favorite", "details", "ingredients", "steps"]
-      }
-    },
-    "ingredients": {
-      "description": "Details about ingredients",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string",
-            "description": "Name of the ingredient"
-          },
-          "type": {
-            "type": "string",
-            "description": "Type of the ingredient (alcohol, mixer, garnish, etc.)"
-          }
-        },
-        "required": ["id", "name" , "type"]
       }
     }
   }

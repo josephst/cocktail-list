@@ -1,4 +1,3 @@
-import { drink } from './drink';
-import { ingredient } from './ingredient';
+import { drink, makeDrink } from './drink';
 
-export { drink, ingredient };
+export { drink, makeDrink };

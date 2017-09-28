@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TextField } from 'material-ui';
+import { Input } from 'semantic-ui-react';
 
 export interface SearchProps {
   updateSearchTerm: (term: string) => void;
@@ -19,8 +19,9 @@ export class DrinkFilter extends React.Component<SearchProps, {}> {
 
   render() {
     return (
-      <TextField
-        hintText="Drink search"
+      <Input
+        placeholder="Drink search"
+        icon="search"
         onChange={this.handleChange}
       />
     );

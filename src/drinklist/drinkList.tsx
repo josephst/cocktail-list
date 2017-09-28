@@ -1,35 +1,77 @@
 import * as React from 'react';
-import Snackbar from 'material-ui/Snackbar';
+import { List, Grid, Responsive, Segment } from 'semantic-ui-react';
+import { sortBy } from 'lodash';
 
-import { DrinkCard } from './drinkCard';
+import { DrinkListItem } from './drinkCard';
+import { DrinkFilter } from './search';
+import { Sidebar } from './sidebar';
+
+import { Drink } from './drink';
 import { DrinkListShared } from './drinkListContainer';
 
 import './drinkList.css';
 
 interface DrinkListProps extends DrinkListShared {
-  hideNetworkError: () => void;
+  clearNetworkError: () => void;
+  applyDrinkFilter: (term: string) => void;
 }
 
-class DrinkList extends React.Component<DrinkListProps, {}> {
+interface DrinkListState {
+  selectedDrink?: Drink;
+}
+
+class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
+  constructor() {
+    super();
+    this.state = {
+      selectedDrink: undefined,
+    };
+  }
   closeMessageBox = () => {
-    this.props.hideNetworkError();
+    this.props.clearNetworkError();
+  }
+
+  handleDrinkSelection = (drink: Drink) => {
+    this.setState({ selectedDrink: drink });
+  }
+
+  clearSelectedDrink: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+    this.setState({ selectedDrink: undefined });
   }
 
   render() {
+    const drinkItems = sortBy(this.props.filteredDrinks, (drink) => {
+      return [drink.details.category, drink.name];
+    }).map((drink) => {
+      return (
+        <DrinkListItem key={drink.id} drink={drink} updateSidebarView={this.handleDrinkSelection} />
+      );
+    });
     return (
-      <div>
-        <div className="DrinkList">
-          {this.props.filteredDrinks.map((drink, index) =>
-            <div key={index}><DrinkCard drink={drink} ingredients={this.props.ingredients} /></div>)
-          }
-        </div>
-        <Snackbar
-          open={this.props.networkError.showError}
-          message={this.props.networkError.message}
-          autoHideDuration={3000}
-          onRequestClose={this.closeMessageBox}
-        />
-      </div>
+      <Grid container={true}>
+        <Grid.Row divided={true}>
+          <Grid.Column tablet={12} computer={12} mobile={16}>
+            <Segment basic={true}>
+              <DrinkFilter
+                updateSearchTerm={this.props.applyDrinkFilter}
+              />
+            </Segment>
+            {this.state.selectedDrink &&
+              <Responsive as={Segment} maxWidth={Responsive.onlyMobile.maxWidth}>
+                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink} />
+              </Responsive>
+            }
+            <List className="DrinkList" size="huge" relaxed={true} divided={false} selection={true}>
+              {drinkItems}
+            </List>
+          </Grid.Column>
+          <Responsive as={Grid.Column} width={4} minWidth={Responsive.onlyTablet.minWidth}>
+              {this.state.selectedDrink &&
+                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink}/>
+              }
+          </Responsive>
+        </Grid.Row>
+      </Grid>
     );
   }
 }

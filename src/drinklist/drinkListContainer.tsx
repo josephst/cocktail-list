@@ -1,13 +1,11 @@
 import * as React from 'react';
 
 import { DrinkList } from './drinkList';
-import { DrinkFilter } from './search/search';
 
-import { Drink, Ingredient } from './drink';
+import { Drink } from './drink';
 
 export interface DrinkListShared {
   filteredDrinks: Drink[];
-  ingredients: Ingredient[];
   networkError: {
     showError: boolean;
     message: string;
@@ -24,7 +22,6 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     this.state = {
       filteredDrinks: [],
       allDrinks: [],
-      ingredients: [],
       networkError: {
         showError: false,
         message: '',
@@ -32,7 +29,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     };
   }
 
-  hideNetworkError = () => {
+  clearNetworkError = () => {
     this.setState({
       networkError: {
         showError: false,
@@ -50,27 +47,21 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
         throw new Error('Error occured while fetching list of drinks');
       })
       .then((res) => res.json())
-      .then((db: { drinks: Drink[], ingredients: Ingredient[] }) => {
+      .then((db: { drinks: Drink[] }) => {
         return {
           drinks: db.drinks.sort((a, b) => a.name < b.name ? 0 : 1),
-          ingredients: db.ingredients
         };
       });
   }
 
   render() {
     return (
-      <div>
-        <DrinkFilter
-          updateSearchTerm={this.filterDrinkList}
-        />
-        <DrinkList
-          filteredDrinks={this.state.filteredDrinks.length > 0 ? this.state.filteredDrinks : this.state.allDrinks}
-          ingredients={this.state.ingredients}
-          networkError={this.state.networkError}
-          hideNetworkError={this.hideNetworkError}
-        />
-      </div>
+      <DrinkList
+        filteredDrinks={this.state.filteredDrinks.length > 0 ? this.state.filteredDrinks : this.state.allDrinks}
+        networkError={this.state.networkError}
+        clearNetworkError={this.clearNetworkError}
+        applyDrinkFilter={this.applyDrinkFilter}
+      />
     );
   }
 
@@ -79,7 +70,6 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
       .then((data) => {
         this.setState({
           allDrinks: data.drinks,
-          ingredients: data.ingredients,
           networkError: {
             showError: false,
             message: '',
@@ -89,7 +79,6 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
       .catch((err) => {
         this.setState({
           allDrinks: [],
-          ingredients: [],
           networkError: {
             message: err.message,
             showError: true,
@@ -98,7 +87,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
       });
   }
 
-  private filterDrinkList = (term: string) => {
+  private applyDrinkFilter = (term: string) => {
     if (term === '') {
       this.setState({ filteredDrinks: this.state.allDrinks });
     } else {

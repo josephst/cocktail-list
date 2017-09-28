@@ -1,31 +1,50 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import Snackbar from 'material-ui/Snackbar';
+import { range } from 'lodash';
 
 import { DrinkList } from './drinkList';
-
-import { drink, ingredient } from '../fixtures';
+import { makeDrink } from '../fixtures';
 
 it('should display a list of drinks', () => {
   const multiple = 2;
   const list = enzyme.shallow(
     <DrinkList
-      filteredDrinks={new Array(multiple).fill(drink)}
-      ingredients={[ingredient]}
+      filteredDrinks={range(0, multiple).map(index => makeDrink(index))}
       networkError={{ showError: false, message: '' }}
-      hideNetworkError={() => false}
+      clearNetworkError={jest.fn()}
+      applyDrinkFilter={jest.fn()}
     />);
-  expect(list.find('DrinkCard')).toHaveLength(multiple);
+  expect(list.find('DrinkListItem')).toHaveLength(multiple);
 });
 
-it('should display a snackbar', () => {
+it('should sort first by category', () => {
+  const multiple = 2;
+  const drinks = range(0, multiple).map(index => makeDrink(index));
+  drinks[0].details.category = 'z';
+  drinks[1].details.category = 'a';
   const list = enzyme.shallow(
     <DrinkList
-      filteredDrinks={[]}
-      ingredients={[]}
-      networkError={{ showError: true, message: 'Test' }}
-      hideNetworkError={() => false}
+      filteredDrinks={drinks}
+      networkError={{ showError: false, message: '' }}
+      clearNetworkError={jest.fn()}
+      applyDrinkFilter={jest.fn()}
     />
   );
-  expect(list.find(Snackbar)).toHaveLength(1);
+  const items = list.find('DrinkListItem');
+  // tslint:disable-next-line:no-console
+  expect(items.get(0).props.drink.id).toBe(1);
+  expect(items.get(0).props.drink.details.category).toBe('a');
 });
+
+// it('should display a modal', () => {
+  // TODO: use bottom sidebar for this?
+//   const list = enzyme.shallow(
+//     <DrinkList
+//       filteredDrinks={[]}
+//       ingredients={[]}
+//       networkError={{ showError: true, message: 'Test' }}
+//       clearNetworkError={() => false}
+//     />
+//   );
+//   expect(list.find(Modal)).toHaveLength(1);
+// });

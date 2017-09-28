@@ -1,6 +1,6 @@
 import * as React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
 import { DrinkListContainer } from './drinklist/drinkListContainer';
@@ -10,7 +10,6 @@ import { DrinkListContainer } from './drinklist/drinkListContainer';
 class App extends React.Component {
   render() {
     return (
-      <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -18,7 +17,6 @@ class App extends React.Component {
           </div>
           <DrinkListContainer />
         </div>
-      </MuiThemeProvider>
     );
   }
 }
