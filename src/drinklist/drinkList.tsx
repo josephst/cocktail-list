@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { List, Grid, Segment } from 'semantic-ui-react';
+import { List, Grid, Responsive, Segment } from 'semantic-ui-react';
 import { sortBy } from 'lodash';
 
 import { DrinkListItem } from './drinkCard';
@@ -35,6 +35,10 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
     this.setState({ selectedDrink: drink });
   }
 
+  clearSelectedDrink: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+    this.setState({ selectedDrink: undefined });
+  }
+
   render() {
     const drinkItems = sortBy(this.props.filteredDrinks, (drink) => {
       return [drink.details.category, drink.name];
@@ -46,19 +50,26 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
     return (
       <Grid container={true}>
         <Grid.Row divided={true}>
-          <Grid.Column width={12}>
+          <Grid.Column tablet={12} computer={12} mobile={16}>
             <Segment basic={true}>
               <DrinkFilter
                 updateSearchTerm={this.props.applyDrinkFilter}
               />
             </Segment>
-            <List className="DrinkList" size={'huge'} relaxed={true} divided={false} selection={true}>
+            {this.state.selectedDrink &&
+              <Responsive as={Segment} maxWidth={Responsive.onlyMobile.maxWidth}>
+                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink} />
+              </Responsive>
+            }
+            <List className="DrinkList" size="huge" relaxed={true} divided={false} selection={true}>
               {drinkItems}
             </List>
           </Grid.Column>
-          <Grid.Column width={4} floated="right">
-            {this.state.selectedDrink && <Sidebar drink={this.state.selectedDrink} />}
-          </Grid.Column>
+          <Responsive as={Grid.Column} width={4} minWidth={Responsive.onlyTablet.minWidth}>
+              {this.state.selectedDrink &&
+                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink}/>
+              }
+          </Responsive>
         </Grid.Row>
       </Grid>
     );
