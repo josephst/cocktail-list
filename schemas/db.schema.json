@@ -11,8 +11,8 @@
           "minLength": 1
         },
         "ice": {
-          "description": "Type of ice the drink is served with (if any)",
-          "type": ["string", "null"]
+          "description": "Type of ice the drink is served with (if any). Ex: rocks, single cube, none",
+          "type": "string"
         },
         "color": {
           "description": "Color of the drink. Used for creating drink images",
@@ -21,10 +21,10 @@
         "category": {
           "type": "string",
           "description": "Category of drink",
-          "enum": ["Ancestrals", "Sours", "Spirit-forward", "Duos and trios", "Chapagne",
-            "Highball, Collins, and Fizzes", "Juleps and smashes", "Hot", "Flips and nogs",
-            "Layered and shots", "Tropical", "Punch", "Cobblers", "Savory", "Non-alcoholic",
-            "Raw ingredient", "Orphans"
+          "enum": ["Ancestrals", "Sours", "Spirit Forward", "Duos and Trios", "Champagne",
+            "Highball, Collins, Fizzes", "Juleps and Smashes", "Hot Drinks", "Flips and Nogs",
+            "Layered Drinks and Shots", "Tropical Drinks", "Punch", "Cobblers", "Savory", "Non-alcoholic",
+            "Orphans"
           ]
         }
       },
@@ -90,6 +90,10 @@
             "items": {
               "$ref": "#/definitions/drink-ingredient"
             }
+          },
+          "source": {
+            "type": "string",
+            "description": "Source of the recipe"
           },
           "steps": {
             "type": "string",

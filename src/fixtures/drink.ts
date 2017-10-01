@@ -21,29 +21,10 @@ export const drink: Drink = {
     glassType: 'Highball',
     ice: 'Cubes'
   },
+  source: 'Test Drinks',
   steps: 'Testing'
 };
 
 export const makeDrink: (index: number) => Drink = (i) => {
-  return ({
-    id: i,
-    default: true,
-    dateCreated: '2017-09-24',
-    hidden: false,
-    favorite: true,
-    name: 'Gin',
-    ingredients: [{
-      name: 'Gin',
-      type: 'Alcohol',
-      quantity: 2,
-      unit: 'oz'
-    }],
-    details: {
-      category: 'Testing',
-      color: 'Clear',
-      glassType: 'Highall',
-      ice: 'Cubes'
-    },
-    steps: 'Testing'
-  });
+  return (Object.assign({}, drink, { id: i }));
 };

@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { List, Grid, Responsive, Segment } from 'semantic-ui-react';
-import { sortBy } from 'lodash';
+import { List, Loader, Grid, Responsive, Segment } from 'semantic-ui-react';
 
 import { DrinkListItem } from './drinkCard';
 import { DrinkFilter } from './search';
@@ -40,9 +39,17 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
   }
 
   render() {
-    const drinkItems = sortBy(this.props.filteredDrinks, (drink) => {
-      return [drink.details.category, drink.name];
-    }).map((drink) => {
+    // waiting on data
+    if (this.props.loading) {
+      return (
+        <Grid container={true}>
+          <Loader />
+        </Grid>
+      );
+    }
+
+    // have data
+    const drinkItems = this.props.filteredDrinks.map((drink) => {
       return (
         <DrinkListItem key={drink.id} drink={drink} updateSidebarView={this.handleDrinkSelection} />
       );
@@ -66,9 +73,9 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
             </List>
           </Grid.Column>
           <Responsive as={Grid.Column} width={4} minWidth={Responsive.onlyTablet.minWidth}>
-              {this.state.selectedDrink &&
-                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink}/>
-              }
+            {this.state.selectedDrink &&
+              <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink} />
+            }
           </Responsive>
         </Grid.Row>
       </Grid>

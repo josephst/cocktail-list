@@ -1,82 +1,3154 @@
 {
-  "drinks": [{
-    "id": 1,
-    "default": true,
-    "dateCreated": "2017-07-20",
-    "hidden": false,
-    "favorite": true,
-    "name": "Gin and Tonic",
-    "ingredients": [
-      {
-        "name": "Gin",
-        "type": "Alcohol",
-        "quantity": 2,
-        "unit": "oz"
+  "drinks": [
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
       },
-      {
-        "name": "Tonic",
-        "type": "Mixer",
-        "quantity": 4,
-        "unit": "oz"
-      },
-      {
-        "name": "Lime juice",
-        "type": "Fruit juice",
-        "quantity": 0.5,
-        "unit": "oz"
-      },
-      {
-        "name": "Lime wedge",
-        "type": "Garnish",
-        "quantity": 1,
-        "unit": null
-      }
-    ],
-    "details": {
-      "category": "Highball, Collins, and Fizzes",
-      "color": "Clear",
-      "glassType": "Highball",
-      "ice": "Cubes"
+      "favorite": false,
+      "hidden": false,
+      "id": 1000,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Vodka",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lillet Blonde",
+          "quantity": 0.75,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Vesper",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
     },
-    "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
-  }, {
-    "id": 2,
-    "default": true,
-    "dateCreated": "2017-08-26",
-    "hidden": false,
-    "favorite": true,
-    "name": "Moscow Mule",
-    "ingredients": [{
-        "name": "Vodka",
-        "type": "Alcohol",
-        "quantity": 2,
-        "unit": "oz"
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
       },
-      {
-        "name": "Ginger beer",
-        "type": "Mixer",
-        "quantity": 4,
-        "unit": "oz"
-      },
-      {
-        "name": "Lime juice",
-        "type": "Fruit juice",
-        "quantity": 0.5,
-        "unit": "oz"
-      },
-      {
-        "name": "Lime wedge",
-        "type": "Garnish",
-        "quantity": 1,
-        "unit": null
-      }
-    ],
-    "details": {
-      "category": "Highball, Collins, and Fizzes",
-      "color": "Clear",
-      "glassType": "Highball",
-      "ice": "Cubes"
+      "favorite": false,
+      "hidden": false,
+      "id": 1001,
+      "ingredients": [
+        {
+          "name": "Bacardi White Rum",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grenadine",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Bacardi",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
-    "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
-  }]
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1002,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Campari",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sweet red vermouth",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Negroni",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old-fashioned glass filled with ice. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Orphans",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1003,
+      "ingredients": [
+        {
+          "name": "Kirsch",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dry vermouth",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "3 dashes Strawberry syrup",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Rose",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir all ingredients with ice and strain into a cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Ancestrals",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1004,
+      "ingredients": [
+        {
+          "name": "Bourbon or rye whiskey",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 dashes Angostura Bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "1 sugar cube",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Few dashes plain water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Old Fashioned",
+      "source": "IBA Official Cocktail",
+      "steps": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1005,
+      "ingredients": [
+        {
+          "name": "Old Tom Gin",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dry vermouth",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1/2 bar spoon Maraschino",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "1/4 bar spoon Absinthe",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "3 dashes Orange Bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Tuxedo",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir all ingredients with ice and strain into cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "collins",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1006,
+      "ingredients": [
+        {
+          "name": "White Cuban Rum",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "6 Mint sprigs",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 teaspoons white sugar",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Soda water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Mojito",
+      "source": "IBA Official Cocktail",
+      "steps": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1007,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Ginger Ale",
+          "quantity": 12,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dash of Angostura bitters (optional)",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Horse's Neck",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1008,
+      "ingredients": [
+        {
+          "name": "Dark rum",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grenadine",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "3 to 4 dashes Angostura bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Planter's Punch",
+      "source": "IBA Official Cocktail",
+      "steps": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1009,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cranberry juice",
+          "quantity": 12,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grapefruit juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Sea Breeze",
+      "source": "IBA Official Cocktail",
+      "steps": "Build all ingredients in a rock glass filled with ice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1010,
+      "ingredients": [
+        {
+          "name": "Pisco",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 raw egg white (small egg)",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Pisco Sour",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1011,
+      "ingredients": [
+        {
+          "name": "Tequila",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Vodka",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "White rum",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Gin",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Gomme syrup",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 dash of Cola",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Long Island Iced Tea",
+      "source": "IBA Official Cocktail",
+      "steps": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1012,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Raspberry syrup",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Few drops of Egg White",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Clover Club",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1013,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Apricot brandy",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Calvados",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Angel Face",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into a cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "champagne-flute",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1014,
+      "ingredients": [
+        {
+          "name": "Champagne",
+          "quantity": 7.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 7.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Mimosa",
+      "source": "IBA Official Cocktail",
+      "steps": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1015,
+      "ingredients": [
+        {
+          "name": "Bourbon whiskey",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Whiskey Sour",
+      "source": "IBA Official Cocktail",
+      "steps": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1016,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 10,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Screwdriver",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into a highball glass filled with ice. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1017,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cola",
+          "quantity": 12,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Cuba Libre",
+      "source": "IBA Official Cocktail",
+      "steps": "Build all ingredients in a highball glass filled with ice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1018,
+      "ingredients": [
+        {
+          "name": "Rye whiskey",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Red vermouth",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 dash Angostura Bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Manhattan",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1019,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Red Port",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Egg yolk",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Porto Flip",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1020,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Soda water",
+          "quantity": 8,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Gin Fizz",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Orphans",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1021,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Kahlúa",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup (according to individual preference of sweetness)",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "1 short strong Espresso",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Espresso Martini",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "margarita",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1022,
+      "ingredients": [
+        {
+          "name": "Tequila",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cointreau",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Margarita",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe)."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "champagne-tulip",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1023,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 dashes Sugar syrup",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Champagne",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "French 75",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1024,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Galliano",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Yellow Bird",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "hurricane",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1025,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Coconut milk",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Pina Colada",
+      "source": "IBA Official Cocktail",
+      "steps": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Ancestrals",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1026,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Maraschino",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Aviation",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "champagne-flute",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1027,
+      "ingredients": [
+        {
+          "name": "Prosecco",
+          "quantity": 10,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Peach puree",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Bellini",
+      "source": "IBA Official Cocktail",
+      "steps": "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)"
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1028,
+      "ingredients": [
+        {
+          "name": "White Créme de Cacao",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Green Créme de Menthe",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cream",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Grasshopper",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1029,
+      "ingredients": [
+        {
+          "name": "Tequila",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grenadine",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Tequila Sunrise",
+      "source": "IBA Official Cocktail",
+      "steps": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1030,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Simple syrup",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Daiquiri",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1031,
+      "ingredients": [
+        {
+          "name": "Scotch whisky",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Drambuie",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Rusty Nail",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old-fashioned glass filled with ice. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Layered Drinks and Shots",
+        "color": "TODO",
+        "glassType": "shot",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1032,
+      "ingredients": [
+        {
+          "name": "Kahlúa",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Baileys Irish Cream",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grand Marnier",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "B52",
+      "source": "IBA Official Cocktail",
+      "steps": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1033,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "White Créme de Menthe",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Stinger",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1034,
+      "ingredients": [
+        {
+          "name": "Galliano",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cream",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Golden Dream",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1035,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "DiSaronno",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "God Mother",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1036,
+      "ingredients": [
+        {
+          "name": "Prosecco",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Aperol",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Splash of Soda water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Spritz Veneziano",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Cobblers",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1037,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Blackberry liqueur",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Bramble",
+      "source": "IBA Official Cocktail",
+      "steps": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1038,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Brown Créme de Cacao",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cream",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Alexander",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1039,
+      "ingredients": [
+        {
+          "name": "Citron Vodka",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Lemon Drop Martini",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass rimmed with sugar."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1040,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Raspberry liqueur",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "French Martini",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1041,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Coffee liqueur",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Black Russian",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Savory",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1042,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Tomato juice",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 to 3 dashes of Worcestershire Sauce",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Tabasco",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Celery salt",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Pepper",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Bloody Mary",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir gently, pour all ingredients into highball glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1043,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dark rum",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange Curaçao",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orgeat syrup",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Mai-tai",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into highball glass. Serve with straw."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "margarita",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1044,
+      "ingredients": [
+        {
+          "name": "Gold rum",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Galliano",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 dash Lime juice",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Top with Prosecco",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Barracuda",
+      "source": "IBA Official Cocktail",
+      "steps": "No instructions given"
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1045,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Peach schnapps",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cranberry juice",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Sex on the Beach",
+      "source": "IBA Official Cocktail",
+      "steps": "Build all ingredients in a highball glass filled with ice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1046,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 drops Absinthe",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 drops Grenadine",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Monkey Gland",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Juleps and Smashes",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1047,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 drops Peach Bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 Fresh mint leaves",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Derby",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1048,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Sidecar",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Hot Drinks",
+        "color": "TODO",
+        "glassType": "hot-drink",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1049,
+      "ingredients": [
+        {
+          "name": "Irish whiskey",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Hot coffee",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cream",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 teaspoon of brown sugar",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Irish Coffee",
+      "source": "IBA Official Cocktail",
+      "steps": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Ancestrals",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1050,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Absinthe",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 sugar cube",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 dashes Peychaud’s bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Sazerac",
+      "source": "IBA Official Cocktail",
+      "steps": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1051,
+      "ingredients": [
+        {
+          "name": "Campari",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Red vermouth",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "A splash of soda water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Americano",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1052,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cherry liqueur",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cointreau",
+          "quantity": 0.75,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "DOM Bénédictine",
+          "quantity": 0.75,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 12,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grenadine",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 dash Angostura bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Singapore Sling",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into highball glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1053,
+      "ingredients": [
+        {
+          "name": "Cognac",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "DiSaronno",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "French Connection",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1054,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Ginger beer",
+          "quantity": 12,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 0.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 slice lime in a highball glass",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Moscow Mule",
+      "source": "IBA Official Cocktail",
+      "steps": "Combine the vodka and ginger beer. Add lime juice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1055,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Soda water",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "John Collins",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)"
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Orphans",
+        "color": "TODO",
+        "glassType": "white-wine",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1056,
+      "ingredients": [
+        {
+          "name": "Dry White Wine",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Créme de Cassis",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Kir",
+      "source": "IBA Official Cocktail",
+      "steps": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Juleps and Smashes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1057,
+      "ingredients": [
+        {
+          "name": "Bourbon whiskey",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "4 fresh mint sprigs",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "1 teaspoon powdered sugar",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 teaspoons water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Mint Julep",
+      "source": "IBA Official Cocktail",
+      "steps": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1058,
+      "ingredients": [
+        {
+          "name": "Tequila",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 bar spoons of Agave nectar",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Tommy's Margarita",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1059,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Apricot brandy",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Paradise",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1060,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dry vermouth",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Olive juice",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Dirty Martini",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into chilled martini glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "champagne-flute",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1061,
+      "ingredients": [
+        {
+          "name": "Champagne",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cognac",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "2 dashes Angostura Bitters",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "1 sugar cube",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Champagne Cocktail",
+      "source": "IBA Official Cocktail",
+      "steps": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Tropical Drinks",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1062,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Maraschino",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Pineapple juice",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grenadine",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Mary Pickford",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled large cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1063,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Grapefruit juice",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Maraschino",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Hemingway Special",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into a double cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1064,
+      "ingredients": [
+        {
+          "name": "Dark rum",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Ginger beer",
+          "quantity": 10,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Dark 'n' Stormy",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into highball glass filled with ice. Add rum first and top it with ginger beer."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1065,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cream",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 Egg white",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "3 dashes Orange flower water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 drops Vanilla extract",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Soda water",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Ramos Fizz",
+      "source": "IBA Official Cocktail",
+      "steps": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Champagne",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1066,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Créme de Cassis",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Sugar syrup",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Russian Spring Punch",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake the ingredients and pour into highball glass. Top with Sparkling wine."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Duos and Trios",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1067,
+      "ingredients": [
+        {
+          "name": "Scotch whisky",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "DiSaronno",
+          "quantity": 3.5,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "God Father",
+      "source": "IBA Official Cocktail",
+      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1068,
+      "ingredients": [
+        {
+          "name": "Citron Vodka",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cointreau",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cranberry juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Cosmopolitan",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into a large cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Spirit Forward",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1069,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 6,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Dry vermouth",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Dry Martini",
+      "source": "IBA Official Cocktail",
+      "steps": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1070,
+      "ingredients": [
+        {
+          "name": "White rum",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Cognac",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Between the Sheets",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1071,
+      "ingredients": [
+        {
+          "name": "Old Tom Gin",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Maraschino",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange Bitters",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Casino",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "old-fashioned",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1072,
+      "ingredients": [
+        {
+          "name": "Cachaca",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "half fresh lime cut into 4 wedges",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "2 teaspoon sugar",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Caipirinha",
+      "source": "IBA Official Cocktail",
+      "steps": "Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Savory",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1073,
+      "ingredients": [
+        {
+          "name": "Silver Tequila",
+          "quantity": 5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Tomato juice",
+          "quantity": 7,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 1,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "1 teaspoon clear honey",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Half slice onion finely chopped",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Few slices fresh red hot chili peppers",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Few drops Worchestershire sauce",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        },
+        {
+          "name": "Salt",
+          "quantity": 0,
+          "type": "Unknown",
+          "unit": null
+        }
+      ],
+      "name": "Vampiro",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into a highball glass, filled with ice."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1074,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lime juice",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Kamikaze",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake and strain into a chilled cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "martini",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1075,
+      "ingredients": [
+        {
+          "name": "Gin",
+          "quantity": 4,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Triple Sec",
+          "quantity": 3,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Lemon juice",
+          "quantity": 2,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "White Lady",
+      "source": "IBA Official Cocktail",
+      "steps": "Shake with ice cubes. Strain into large cocktail glass."
+    },
+    {
+      "dateCreated": "2017-9-30",
+      "default": true,
+      "details": {
+        "category": "Sours",
+        "color": "TODO",
+        "glassType": "highball",
+        "ice": "TODO"
+      },
+      "favorite": false,
+      "hidden": false,
+      "id": 1076,
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "quantity": 4.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Galliano",
+          "quantity": 1.5,
+          "type": "Unknown",
+          "unit": "cL"
+        },
+        {
+          "name": "Orange juice",
+          "quantity": 9,
+          "type": "Unknown",
+          "unit": "cL"
+        }
+      ],
+      "name": "Harvey Wallbanger",
+      "source": "IBA Official Cocktail",
+      "steps": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top."
+    },
+    {
+      "id": 1,
+      "default": true,
+      "dateCreated": "2017-07-20",
+      "hidden": false,
+      "favorite": true,
+      "name": "Gin and Tonic",
+      "ingredients": [
+        {
+          "name": "Gin",
+          "type": "Alcohol",
+          "quantity": 2,
+          "unit": "oz"
+        },
+        {
+          "name": "Tonic",
+          "type": "Mixer",
+          "quantity": 4,
+          "unit": "oz"
+        },
+        {
+          "name": "Lime juice",
+          "type": "Fruit juice",
+          "quantity": 0.5,
+          "unit": "oz"
+        },
+        {
+          "name": "Lime wedge",
+          "type": "Garnish",
+          "quantity": 1,
+          "unit": null
+        }
+      ],
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "Clear",
+        "glassType": "Highball",
+        "ice": "Cubes"
+      },
+      "source": "Self",
+      "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
+    },
+    {
+      "id": 2,
+      "default": true,
+      "dateCreated": "2017-08-26",
+      "hidden": false,
+      "favorite": true,
+      "name": "Moscow Mule",
+      "ingredients": [
+        {
+          "name": "Vodka",
+          "type": "Alcohol",
+          "quantity": 2,
+          "unit": "oz"
+        },
+        {
+          "name": "Ginger beer",
+          "type": "Mixer",
+          "quantity": 4,
+          "unit": "oz"
+        },
+        {
+          "name": "Lime juice",
+          "type": "Fruit juice",
+          "quantity": 0.5,
+          "unit": "oz"
+        },
+        {
+          "name": "Lime wedge",
+          "type": "Garnish",
+          "quantity": 1,
+          "unit": null
+        }
+      ],
+      "details": {
+        "category": "Highball, Collins, Fizzes",
+        "color": "Clear",
+        "glassType": "Highball",
+        "ice": "Cubes"
+      },
+      "source": "Self",
+      "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
+    }
+  ]
 }
