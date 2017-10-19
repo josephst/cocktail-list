@@ -98,8 +98,12 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     if (term === '') {
       this.setState({ filteredDrinks: [] });
     } else {
+      const lowerTerm = term.toLowerCase();
       this.setState({
-        filteredDrinks: this.state.allDrinks.filter((drink) => drink.name.toLowerCase().indexOf(term) !== -1)
+        filteredDrinks: this.state.allDrinks.filter((drink) => {
+          return drink.name.toLowerCase().indexOf(lowerTerm) !== -1 ||
+            drink.details.category.toLowerCase().indexOf(lowerTerm) !== -1;
+        })
       });
     }
   }

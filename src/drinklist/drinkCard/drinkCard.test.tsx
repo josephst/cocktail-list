@@ -14,7 +14,7 @@ it('should have the name of the drink', () => {
   expect(card.find('.drinkName')).toBeTruthy();
 });
 
-it.skip('additional information about the drink (missing during change to semantic)', () => {
+xit('additional information about the drink (missing during change to semantic)', () => {
   const card = enzyme.shallow(<DrinkListItem drink={drink} updateSidebarView={jest.fn()} />);
   expect(card.find('.ingredientList')).toBeTruthy();
   expect(card.find('.ingredient')).toHaveLength(drink.ingredients.length);

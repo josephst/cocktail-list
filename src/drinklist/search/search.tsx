@@ -14,7 +14,7 @@ export class DrinkFilter extends React.Component<SearchProps, {}> {
   handleChange(e: React.FormEvent<HTMLInputElement>) {
     const target = e.target as HTMLInputElement;
     const term = target.value || '';
-    this.props.updateSearchTerm(term.toLowerCase());
+    this.props.updateSearchTerm(term);
   }
 
   render() {

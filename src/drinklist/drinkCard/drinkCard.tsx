@@ -22,7 +22,9 @@ export class DrinkListItem extends React.Component<DrinkListItemProps, {}> {
       <List.Item className="DrinkListItem" onClick={this.handleClick} as="a">
         <List.Content>
           <List.Header className="drinkName">
-            {this.props.drink.favorite && <Icon name="star" />}{this.props.drink.name}
+            {this.props.drink.favorite && <Icon name="star" />}
+            {this.props.drink.default === false && <Icon name="user" />}
+            {this.props.drink.name}
           </List.Header>
           <List.Description>
             {this.props.drink.details.category}
