@@ -1,7 +1,8 @@
 {
   "name": "cocktail-pwa",
   "version": "0.1.0",
-  "description": "Single-page progressive web app for displaying a list of cocktail recipes",
+  "description":
+    "Single-page progressive web app for displaying a list of cocktail recipes",
   "license": "MIT",
   "private": true,
   "author": "Joseph Stahl <hello@josephstahl.com> (https://josephstahl.com)",
@@ -37,7 +38,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,json,css}": [
-      "prettier --write",
+      "prettier --config .prettierrc --write",
       "git add"
     ]
   },
