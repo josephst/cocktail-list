@@ -14,7 +14,8 @@ it('should display a list of drinks', () => {
       clearNetworkError={jest.fn()}
       applyDrinkFilter={jest.fn()}
       loading={false}
-    />);
+    />
+  );
   expect(list.find('DrinkListItem')).toHaveLength(multiple);
 });
 
@@ -32,7 +33,7 @@ it('shows a loading spinner while waiting on data', () => {
 });
 
 // it('should display a modal', () => {
-  // TODO: use bottom sidebar for this?
+// TODO: use bottom sidebar for this?
 //   const list = enzyme.shallow(
 //     <DrinkList
 //       filteredDrinks={[]}

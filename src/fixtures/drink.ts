@@ -12,19 +12,19 @@ export const drink: Drink = {
       name: 'Gin',
       type: 'Alcohol',
       quantity: 2,
-      unit: 'oz'
+      unit: 'oz',
     },
   ],
   details: {
     category: 'Testing',
     color: 'Clear',
     glassType: 'Highball',
-    ice: 'Cubes'
+    ice: 'Cubes',
   },
   source: 'Test Drinks',
-  steps: 'Testing'
+  steps: 'Testing',
 };
 
-export const makeDrink: (index: number) => Drink = (i) => {
-  return (Object.assign({}, drink, { id: i }));
+export const makeDrink: (index: number) => Drink = i => {
+  return Object.assign({}, drink, { id: i });
 };

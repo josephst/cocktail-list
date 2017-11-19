@@ -15,7 +15,7 @@ export class DrinkListItem extends React.Component<DrinkListItemProps, {}> {
 
   handleClick = (click: React.MouseEvent<HTMLAnchorElement>) => {
     this.props.updateSidebarView(this.props.drink);
-  }
+  };
 
   render() {
     return (

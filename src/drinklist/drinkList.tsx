@@ -28,15 +28,15 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
   }
   closeMessageBox = () => {
     this.props.clearNetworkError();
-  }
+  };
 
   handleDrinkSelection = (drink: Drink) => {
     this.setState({ selectedDrink: drink });
-  }
+  };
 
-  clearSelectedDrink: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+  clearSelectedDrink: React.MouseEventHandler<HTMLButtonElement> = e => {
     this.setState({ selectedDrink: undefined });
-  }
+  };
 
   render() {
     // waiting on data
@@ -49,9 +49,13 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
     }
 
     // have data
-    const drinkItems = this.props.filteredDrinks.map((drink) => {
+    const drinkItems = this.props.filteredDrinks.map(drink => {
       return (
-        <DrinkListItem key={drink.id} drink={drink} updateSidebarView={this.handleDrinkSelection} />
+        <DrinkListItem
+          key={drink.id}
+          drink={drink}
+          updateSidebarView={this.handleDrinkSelection}
+        />
       );
     });
     return (
@@ -59,23 +63,40 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
         <Grid.Row divided={true}>
           <Grid.Column tablet={12} computer={12} mobile={16}>
             <Segment basic={true}>
-              <DrinkFilter
-                updateSearchTerm={this.props.applyDrinkFilter}
-              />
+              <DrinkFilter updateSearchTerm={this.props.applyDrinkFilter} />
             </Segment>
-            {this.state.selectedDrink &&
-              <Responsive as={Segment} maxWidth={Responsive.onlyMobile.maxWidth}>
-                <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink} />
+            {this.state.selectedDrink && (
+              <Responsive
+                as={Segment}
+                maxWidth={Responsive.onlyMobile.maxWidth}
+              >
+                <Sidebar
+                  drink={this.state.selectedDrink}
+                  clearSelectedDrink={this.clearSelectedDrink}
+                />
               </Responsive>
-            }
-            <List className="DrinkList" size="huge" relaxed={true} divided={false} selection={true}>
+            )}
+            <List
+              className="DrinkList"
+              size="huge"
+              relaxed={true}
+              divided={false}
+              selection={true}
+            >
               {drinkItems}
             </List>
           </Grid.Column>
-          <Responsive as={Grid.Column} width={4} minWidth={Responsive.onlyTablet.minWidth}>
-            {this.state.selectedDrink &&
-              <Sidebar drink={this.state.selectedDrink} clearSelectedDrink={this.clearSelectedDrink} />
-            }
+          <Responsive
+            as={Grid.Column}
+            width={4}
+            minWidth={Responsive.onlyTablet.minWidth}
+          >
+            {this.state.selectedDrink && (
+              <Sidebar
+                drink={this.state.selectedDrink}
+                clearSelectedDrink={this.clearSelectedDrink}
+              />
+            )}
           </Responsive>
         </Grid.Row>
       </Grid>

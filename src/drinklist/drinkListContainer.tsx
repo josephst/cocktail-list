@@ -28,7 +28,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
       networkError: {
         showError: false,
         message: '',
-      }
+      },
     };
   }
 
@@ -40,28 +40,32 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
         message: '',
       },
     });
-  }
+  };
 
   fetchData = async () => {
     return fetch(`${process.env.PUBLIC_URL}/data/db.json`)
-      .then((res) => {
+      .then(res => {
         if (res.ok) {
           return res;
         }
         throw new Error('Error occured while fetching list of drinks');
       })
-      .then((res) => res.json())
+      .then(res => res.json())
       .then((db: { drinks: Drink[] }) => {
         return {
           drinks: db.drinks,
         };
       });
-  }
+  };
 
   render() {
     return (
       <DrinkList
-        filteredDrinks={this.state.filteredDrinks.length > 0 ? this.state.filteredDrinks : this.state.allDrinks}
+        filteredDrinks={
+          this.state.filteredDrinks.length > 0
+            ? this.state.filteredDrinks
+            : this.state.allDrinks
+        }
         networkError={this.state.networkError}
         clearNetworkError={this.clearNetworkError}
         applyDrinkFilter={this.applyDrinkFilter}
@@ -72,7 +76,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
 
   componentDidMount() {
     this.fetchData()
-      .then((data) => {
+      .then(data => {
         this.setState({
           allDrinks: this.sortDrinks(data.drinks),
           networkError: {
@@ -82,7 +86,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
           loading: false,
         });
       })
-      .catch((err) => {
+      .catch(err => {
         this.setState({
           allDrinks: [],
           networkError: {
@@ -100,19 +104,21 @@ class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
     } else {
       const lowerTerm = term.toLowerCase();
       this.setState({
-        filteredDrinks: this.state.allDrinks.filter((drink) => {
-          return drink.name.toLowerCase().indexOf(lowerTerm) !== -1 ||
-            drink.details.category.toLowerCase().indexOf(lowerTerm) !== -1;
-        })
+        filteredDrinks: this.state.allDrinks.filter(drink => {
+          return (
+            drink.name.toLowerCase().indexOf(lowerTerm) !== -1 ||
+            drink.details.category.toLowerCase().indexOf(lowerTerm) !== -1
+          );
+        }),
       });
     }
-  }
+  };
 
   sortDrinks = (drinks: Drink[]) => {
-    return sortBy(drinks, (drink) => {
+    return sortBy(drinks, drink => {
       return [drink.details.category, drink.name];
     });
-  }
+  };
 }
 
 export { DrinkListContainer };
