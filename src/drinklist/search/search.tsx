@@ -6,8 +6,8 @@ export interface SearchProps {
 }
 
 export class DrinkFilter extends React.Component<SearchProps, {}> {
-  constructor() {
-    super();
+  constructor(props: SearchProps) {
+    super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 

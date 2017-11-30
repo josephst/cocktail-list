@@ -20,8 +20,8 @@ interface DrinkListState {
 }
 
 class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
-  constructor() {
-    super();
+  constructor(props: DrinkListProps) {
+    super(props);
     this.state = {
       selectedDrink: undefined,
     };

@@ -19,8 +19,8 @@ interface DrinkListContainerState extends DrinkListShared {
 }
 
 class DrinkListContainer extends React.Component<{}, DrinkListContainerState> {
-  constructor() {
-    super();
+  constructor(props: {}) {
+    super(props);
     this.state = {
       filteredDrinks: [],
       allDrinks: [],

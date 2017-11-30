@@ -9,8 +9,8 @@ interface DrinkListItemProps {
 }
 
 export class DrinkListItem extends React.Component<DrinkListItemProps, {}> {
-  constructor() {
-    super();
+  constructor(props: DrinkListItemProps) {
+    super(props);
   }
 
   handleClick = (click: React.MouseEvent<HTMLAnchorElement>) => {
