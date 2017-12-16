@@ -1,105 +1,41 @@
 import * as React from 'react';
-import { List, Loader, Grid, Responsive, Segment } from 'semantic-ui-react';
 
-import { DrinkListItem } from './drinkCard';
-import { DrinkFilter } from './search';
-import { Sidebar } from './sidebar';
+import { Card } from './card/card';
 
 import { Drink } from './drink';
-import { DrinkListShared } from './drinkListContainer';
 
-import './drinkList.css';
-
-interface DrinkListProps extends DrinkListShared {
-  clearNetworkError: () => void;
-  applyDrinkFilter: (term: string) => void;
+interface DrinkListProps {
+  drinks: Drink[];
 }
-
 interface DrinkListState {
-  selectedDrink?: Drink;
+  expandedDrink?: number;
 }
 
 class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
   constructor(props: DrinkListProps) {
     super(props);
-    this.state = {
-      selectedDrink: undefined,
-    };
+    this.state = { expandedDrink: undefined };
+    this.expandDrink = this.expandDrink.bind(this);
   }
-  closeMessageBox = () => {
-    this.props.clearNetworkError();
-  };
 
-  handleDrinkSelection = (drink: Drink) => {
-    this.setState({ selectedDrink: drink });
-  };
-
-  clearSelectedDrink: React.MouseEventHandler<HTMLButtonElement> = e => {
-    this.setState({ selectedDrink: undefined });
-  };
+  expandDrink(id: number | undefined) {
+    this.setState({ expandedDrink: id });
+  }
 
   render() {
-    // waiting on data
-    if (this.props.loading) {
-      return (
-        <Grid container={true}>
-          <Loader />
-        </Grid>
-      );
-    }
-
-    // have data
-    const drinkItems = this.props.filteredDrinks.map(drink => {
-      return (
-        <DrinkListItem
-          key={drink.id}
-          drink={drink}
-          updateSidebarView={this.handleDrinkSelection}
-        />
-      );
-    });
     return (
-      <Grid container={true}>
-        <Grid.Row divided={true}>
-          <Grid.Column tablet={12} computer={12} mobile={16}>
-            <Segment basic={true}>
-              <DrinkFilter updateSearchTerm={this.props.applyDrinkFilter} />
-            </Segment>
-            {this.state.selectedDrink && (
-              <Responsive
-                as={Segment}
-                maxWidth={Responsive.onlyMobile.maxWidth}
-              >
-                <Sidebar
-                  drink={this.state.selectedDrink}
-                  clearSelectedDrink={this.clearSelectedDrink}
-                />
-              </Responsive>
-            )}
-            <List
-              className="DrinkList"
-              size="huge"
-              relaxed={true}
-              divided={false}
-              selection={true}
-            >
-              {drinkItems}
-            </List>
-          </Grid.Column>
-          <Responsive
-            as={Grid.Column}
-            width={4}
-            minWidth={Responsive.onlyTablet.minWidth}
-          >
-            {this.state.selectedDrink && (
-              <Sidebar
-                drink={this.state.selectedDrink}
-                clearSelectedDrink={this.clearSelectedDrink}
+      <ul>
+        {this.props.drinks &&
+          this.props.drinks.map(drink => (
+            <li key={drink.id}>
+              <Card
+                drink={drink}
+                selectedDrinkId={this.state.expandedDrink}
+                expandDrink={this.expandDrink}
               />
-            )}
-          </Responsive>
-        </Grid.Row>
-      </Grid>
+            </li>
+          ))}
+      </ul>
     );
   }
 }
