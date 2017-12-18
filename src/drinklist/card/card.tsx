@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ListGroupItem } from 'react-bootstrap';
+import { ListGroupItem, Glyphicon } from 'react-bootstrap';
 
 import { CardExpandedDetails } from './cardExpandedDetails';
 
@@ -31,8 +31,14 @@ class Card extends React.Component<CardProps, CardState> {
 
   render() {
     const isExpanded = this.props.selectedDrinkId === this.props.drink.id;
+    const isFavorite = this.props.drink.favorite;
     return (
       <ListGroupItem onClick={this.handleClick}>
+        {isFavorite && (
+          <span>
+            <Glyphicon glyph="heart" />{' '}
+          </span>
+        )}
         <b>{this.props.drink.name}</b>
         {isExpanded && <CardExpandedDetails drink={this.props.drink} />}
       </ListGroupItem>

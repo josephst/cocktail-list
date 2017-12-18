@@ -32,6 +32,7 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
               drink={drink}
               selectedDrinkId={this.state.expandedDrink}
               expandDrink={this.expandDrink}
+              key={drink.id}
             />
           ))}
       </ListGroup>

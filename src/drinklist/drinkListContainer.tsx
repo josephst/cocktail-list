@@ -1,35 +1,14 @@
 import * as React from 'react';
 
-import { DrinkList } from './drinkList';
-import { CategorySwitcher } from './categorySwitcher';
+// import { DrinkList } from './drinkList';
+// import { CategorySwitcher } from './categorySwitcher';
+import { TabViewController } from './tabViewController';
 import { Drink } from './drink';
-
-export enum DrinkCategoryCode {
-  All,
-  Favorites,
-}
-
-export interface DrinkCategory {
-  name: string;
-  code: DrinkCategoryCode;
-}
-
-const categories: DrinkCategory[] = [
-  {
-    name: 'All',
-    code: DrinkCategoryCode.All,
-  },
-  {
-    name: 'Favorites',
-    code: DrinkCategoryCode.Favorites,
-  },
-];
 
 export interface DrinkListState {
   drinks: Drink[];
   loading: boolean;
   drinksInCategory: Drink[];
-  selectedCategory: DrinkCategoryCode;
 }
 
 class DrinkListContainer extends React.Component<{}, DrinkListState> {
@@ -39,9 +18,7 @@ class DrinkListContainer extends React.Component<{}, DrinkListState> {
       drinks: [],
       loading: true,
       drinksInCategory: [],
-      selectedCategory: DrinkCategoryCode.All,
     };
-    this.navigateToCategory = this.navigateToCategory.bind(this);
   }
 
   componentDidMount() {
@@ -56,37 +33,14 @@ class DrinkListContainer extends React.Component<{}, DrinkListState> {
       );
   }
 
-  navigateToCategory(category: DrinkCategory) {
-    switch (category.code) {
-      case DrinkCategoryCode.Favorites: {
-        this.setState({
-          drinksInCategory: this.state.drinks.filter(drink => drink.favorite),
-          selectedCategory: category.code,
-        });
-        break;
-      }
-      default: {
-        this.setState({
-          drinksInCategory: this.state.drinks,
-          selectedCategory: DrinkCategoryCode.All,
-        });
-        break;
-      }
-    }
-  }
-
   render() {
     if (this.state.loading) {
       return <div>Loading...</div>;
     } else {
       return (
         <div>
-          <DrinkList drinks={this.state.drinksInCategory} />
-          <CategorySwitcher
-            navigateToCategory={this.navigateToCategory}
-            selectedCategory={this.state.selectedCategory}
-            categories={categories}
-          />
+          <TabViewController drinks={this.state.drinks} />
+          {/* <DrinkList drinks={this.state.drinksInCategory} /> */}
         </div>
       );
     }
