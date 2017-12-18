@@ -10,17 +10,18 @@
     "@types/node": "^8.0.26",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.2",
+    "bootstrap": "3",
     "lodash": "^4.17.4",
     "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-scripts-ts": "^2.6.0",
-    "react-tap-event-plugin": "^3.0.2",
-    "semantic-ui-css": "^2.2.12",
-    "semantic-ui-react": "^0.77.1"
+    "react-tap-event-plugin": "^3.0.2"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.0",
     "@types/lodash": "^4.14.74",
+    "@types/react-bootstrap": "^0.31.8",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
     "husky": "^0.14.3",

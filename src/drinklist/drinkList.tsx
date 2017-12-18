@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ListGroup } from 'react-bootstrap';
 
 import { Card } from './card/card';
 
@@ -24,18 +25,16 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
 
   render() {
     return (
-      <ul>
+      <ListGroup>
         {this.props.drinks &&
           this.props.drinks.map(drink => (
-            <li key={drink.id}>
-              <Card
-                drink={drink}
-                selectedDrinkId={this.state.expandedDrink}
-                expandDrink={this.expandDrink}
-              />
-            </li>
+            <Card
+              drink={drink}
+              selectedDrinkId={this.state.expandedDrink}
+              expandDrink={this.expandDrink}
+            />
           ))}
-      </ul>
+      </ListGroup>
     );
   }
 }

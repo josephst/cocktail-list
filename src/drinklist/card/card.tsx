@@ -1,10 +1,9 @@
 import * as React from 'react';
+import { ListGroupItem } from 'react-bootstrap';
 
-import { ExpandedCard } from './expandedCard';
+import { CardExpandedDetails } from './cardExpandedDetails';
 
 import { Drink } from '../drink';
-
-import './card.css';
 
 interface CardState {}
 
@@ -31,21 +30,12 @@ class Card extends React.Component<CardProps, CardState> {
   }
 
   render() {
+    const isExpanded = this.props.selectedDrinkId === this.props.drink.id;
     return (
-      <div>
-        <button
-          onClick={this.handleClick}
-          className={this.props.drink.favorite ? 'favorite' : ''}
-        >
-          {this.props.drink.name}
-        </button>
-        <div>
-          {this.props.selectedDrinkId &&
-            this.props.selectedDrinkId === this.props.drink.id && (
-              <ExpandedCard drink={this.props.drink} />
-            )}
-        </div>
-      </div>
+      <ListGroupItem onClick={this.handleClick}>
+        <b>{this.props.drink.name}</b>
+        {isExpanded && <CardExpandedDetails drink={this.props.drink} />}
+      </ListGroupItem>
     );
   }
 }

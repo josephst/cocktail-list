@@ -11,7 +11,7 @@ it('renders without crashing', () => {
   const div = enzyme.shallow(
     <Card drink={drink} expandDrink={expandDrinkMock} />
   );
-  expect(div.find('button')).toBeTruthy();
+  expect(div.exists()).toBeTruthy();
 });
 
 it('renders by name', () => {
