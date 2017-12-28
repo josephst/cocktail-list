@@ -14,7 +14,7 @@ class AboutApp extends React.Component<{}, {}> {
             App by <a href="https://josephstahl.com">Joseph Stahl</a>
           </h3>
         </div>
-        <div>
+        <div id="copyright">
           <p>Copyright 2017 Joseph Stahl</p>
           <p>
             Permission is hereby granted, free of charge, to any person
