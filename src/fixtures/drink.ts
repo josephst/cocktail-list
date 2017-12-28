@@ -14,6 +14,11 @@ export const drink: Drink = {
       quantity: 2,
       unit: 'oz',
     },
+    {
+      name: 'Lime',
+      type: 'Garnish',
+      quantity: 1,
+    },
   ],
   details: {
     category: 'Testing',

@@ -13,6 +13,10 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
+"@types/escape-string-regexp@^0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/escape-string-regexp/-/escape-string-regexp-0.0.32.tgz#296005808f51d27fb2a2de8d1ca080a91ee3375c"
+
 "@types/history@*":
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"

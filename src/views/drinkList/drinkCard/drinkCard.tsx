@@ -11,23 +11,23 @@ export interface DrinkCardProps {
 
 const DrinkCard: React.SFC<DrinkCardProps> = props => {
   const drink = props.drink;
-  return (
-    <div>
-      <button
-        onClick={() => props.toggleFavorite(props.drink.id)}
-        id="favoriteButton"
-      >
-        {props.drink.favorite ? 'Remove Fave' : 'Add Fave'}
-      </button>
-      <h2 onClick={() => props.handleClick(props.drink.id)}>{drink.name}</h2>
-      {props.expandedId === props.drink.id && (
-        // expanded
+  const titleBar = (
+    <h2 onClick={() => props.handleClick(drink.id)}>{drink.name}</h2>
+  );
+  if (props.expandedId === drink.id) {
+    // expanded
+    return (
+      <div>
+        {titleBar}
         <div onClick={() => props.handleClick(props.drink.id)}>
-          <hr />
+          <div>{drink.details.category}</div>
           <h3>Ingredients</h3>
           <ul>
-            {drink.ingredients.map((ing, index) => (
-              <li key={index}>{`${ing.quantity} ${ing.unit} ${ing.name}`}</li>
+            {drink.ingredients.map(ing => (
+              <li key={ing.name}>
+                {ing.quantity === 0 ? '' : ing.quantity} {ing.unit || ''}{' '}
+                {ing.name}
+              </li>
             ))}
           </ul>
           <hr />
@@ -35,9 +35,18 @@ const DrinkCard: React.SFC<DrinkCardProps> = props => {
           {drink.steps}
           <div>Source: {drink.source}</div>
         </div>
-      )}
-    </div>
-  );
+        <button
+          onClick={() => props.toggleFavorite(drink.id)}
+          id="favoriteButton"
+        >
+          {drink.favorite ? 'Remove Fave' : 'Add Fave'}
+        </button>
+      </div>
+    );
+  } else {
+    // collapsed
+    return titleBar;
+  }
 };
 
 export { DrinkCard };

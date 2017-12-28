@@ -7,13 +7,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import {
-  AboutApp,
-  AddDrink,
-  DrinkListContainer,
-  SearchForDrink,
-  NotFound,
-} from './views';
+import { AboutApp, AddDrink, DrinkListContainer, NotFound } from './views';
 
 class App extends React.Component<{}, {}> {
   render() {
@@ -26,9 +20,6 @@ class App extends React.Component<{}, {}> {
             </li>
             <li>
               <Link to="/favorites">Favorites</Link>
-            </li>
-            <li>
-              <Link to="/search">Search</Link>
             </li>
             <hr />
             <li>
@@ -49,7 +40,6 @@ class App extends React.Component<{}, {}> {
             />
             <Route path="/drinks" component={DrinkListContainer} />
             <Route path="/favorites" component={DrinkListContainer} />
-            <Route path="/search" component={SearchForDrink} />
             <Route path="/add" component={AddDrink} />
             <Route path="/about" component={AboutApp} />
             <Route component={NotFound} />

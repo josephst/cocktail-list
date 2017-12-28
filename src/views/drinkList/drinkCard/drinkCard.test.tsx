@@ -78,7 +78,7 @@ it('toggles favorites', () => {
       drink={drink}
       handleClick={expansionFn}
       toggleFavorite={favoriteFn}
-      expandedId={-1}
+      expandedId={id}
     />
   );
   collapsed.find('#favoriteButton').simulate('click');
