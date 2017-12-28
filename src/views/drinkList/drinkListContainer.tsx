@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { match } from 'react-router';
 import * as escapeStringRegexp from 'escape-string-regexp';
+import { sortBy } from 'lodash';
 
 import { DrinkList } from './drinkList';
 import { SearchForDrink } from './search';
@@ -37,7 +38,7 @@ class DrinkListContainer extends React.Component<
 
   // TODO: remove and connect to MobX
   componentDidMount() {
-    const drinks = [0, 1, 2, 3, 4].map(i => makeDrink(i)).map(
+    let drinks = [4, 3, 2, 1, 0].map(i => makeDrink(i)).map(
       drink =>
         (drink = {
           ...drink,
@@ -45,6 +46,8 @@ class DrinkListContainer extends React.Component<
           name: `${drink.name}-${drink.id}`,
         })
     );
+    // alphabetical order
+    drinks = sortBy(drinks, drink => drink.name);
     this.setState({
       allDrinks: drinks,
       searchedDrinks: drinks,
