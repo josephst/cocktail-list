@@ -1,4 +1,4 @@
-import { Drink } from '../drinklist/drink';
+import { Drink } from '../typings/drink';
 
 export const drink: Drink = {
   id: 1,

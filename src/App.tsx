@@ -10,12 +10,12 @@ import {
 import {
   AboutApp,
   AddDrink,
-  DrinkList,
+  DrinkListContainer,
   SearchForDrink,
   NotFound,
 } from './views';
 
-class App extends React.Component {
+class App extends React.Component<{}, {}> {
   render() {
     return (
       <Router>
@@ -47,8 +47,8 @@ class App extends React.Component {
               path="/"
               render={() => <Redirect to="/drinks" />}
             />
-            <Route path="/drinks" component={DrinkList} />
-            <Route path="/favorites" component={DrinkList} />
+            <Route path="/drinks" component={DrinkListContainer} />
+            <Route path="/favorites" component={DrinkListContainer} />
             <Route path="/search" component={SearchForDrink} />
             <Route path="/add" component={AddDrink} />
             <Route path="/about" component={AboutApp} />

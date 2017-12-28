@@ -1,2 +1,2 @@
-import { DrinkList } from './drinkList';
-export { DrinkList };
+import { DrinkListContainer } from './drinkListContainer';
+export { DrinkListContainer };
