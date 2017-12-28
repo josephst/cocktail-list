@@ -13,7 +13,10 @@ const DrinkCard: React.SFC<DrinkCardProps> = props => {
   const drink = props.drink;
   return (
     <div>
-      <button onClick={() => props.toggleFavorite(props.drink.id)}>
+      <button
+        onClick={() => props.toggleFavorite(props.drink.id)}
+        id="favoriteButton"
+      >
         {props.drink.favorite ? 'Remove Fave' : 'Add Fave'}
       </button>
       <h2 onClick={() => props.handleClick(props.drink.id)}>{drink.name}</h2>
