@@ -3,7 +3,7 @@ import { inject, observer } from 'mobx-react';
 
 import { DrinkStore } from '../../stores';
 import { AddDrink, IAddDrinkProps } from './add';
-import { IAddedIngredient } from './ingredient';
+import { IAddedIngredient, IngredientContainer } from './ingredient';
 
 interface IAddDrinkContainerProps {
   drinkStore?: DrinkStore;
@@ -101,9 +101,27 @@ export class AddDrinkContainer extends React.Component<
   };
 
   render() {
+    const ingredientContainers = this.state.ingredients.map(ing => (
+      <IngredientContainer
+        {...ing}
+        saveIngredient={this.handleIngredientInput}
+        hasBeenSubmitted={true}
+      />
+    ));
+    ingredientContainers.push(
+      <IngredientContainer
+        name=""
+        quantity={0}
+        type=""
+        unit=""
+        saveIngredient={this.handleIngredientInput}
+        hasBeenSubmitted={false}
+        id={this.state.ingredients.length}
+      />
+    );
     const props: IAddDrinkProps = {
       favorite: this.state.favorite,
-      ingredients: this.state.ingredients,
+      ingredients: ingredientContainers,
       name: this.state.name,
       source: this.state.source,
       steps: this.state.steps,

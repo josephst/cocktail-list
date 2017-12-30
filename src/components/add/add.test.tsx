@@ -45,7 +45,7 @@ it('shows a "successfully added message"', () => {
     ...addDrinkProps,
   };
   const div = enzyme.shallow(<AddDrink {...props} />);
-  expect(div.find('.success')).toHaveLength(1);
+  expect(div.find('#success')).toHaveLength(1);
 });
 
 it('does not show a "successfully added message" at first', () => {
@@ -64,5 +64,5 @@ it('does not show a "successfully added message" at first', () => {
     successfullyAdded: false,
   };
   const div = enzyme.shallow(<AddDrink {...props} />);
-  expect(div.find('.success')).toHaveLength(0);
+  expect(div.find('#success')).toHaveLength(0);
 });

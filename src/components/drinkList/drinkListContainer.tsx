@@ -65,13 +65,16 @@ class DrinkListContainer extends React.Component<
 
   render() {
     let drinksToDisplay: DrinkModel[];
+    let pageTitle = 'All Drinks';
     // first, narrow down to favorites/ non-favorites
     if (
       this.props.drinkStore &&
       this.props.match &&
       this.props.match.path === '/favorites'
     ) {
+      // displaying favorites
       drinksToDisplay = this.props.drinkStore.favoriteDrinks || [];
+      pageTitle = 'Favorite Drinks';
     } else if (this.props.drinkStore) {
       drinksToDisplay = this.props.drinkStore.drinks || [];
     } else {
@@ -92,7 +95,7 @@ class DrinkListContainer extends React.Component<
     return (
       <div>
         <SearchForDrink searchForDrink={this.handleSearchInput} />
-        <DrinkList drinks={drinksToDisplay} />
+        <DrinkList drinks={drinksToDisplay} pageTitle={pageTitle} />
       </div>
     );
   }

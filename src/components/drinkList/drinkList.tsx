@@ -2,9 +2,11 @@ import * as React from 'react';
 
 import { DrinkCardContainer } from './drinkCard';
 import { DrinkModel, DrinkId } from '../../models/DrinkModel';
+import { PageHeader } from 'react-bootstrap';
 
 interface IDrinkListProps {
   drinks: DrinkModel[];
+  pageTitle: string;
 }
 
 interface IDrinkListState {
@@ -32,6 +34,7 @@ class DrinkList extends React.Component<IDrinkListProps, IDrinkListState> {
   render() {
     return (
       <div>
+        <PageHeader>{this.props.pageTitle}</PageHeader>
         <ul>
           {this.props.drinks.map(drink => (
             <li key={drink.id}>

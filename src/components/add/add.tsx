@@ -1,11 +1,18 @@
 import * as React from 'react';
+import {
+  Alert,
+  Button,
+  FormGroup,
+  ControlLabel,
+  FormControl,
+  PageHeader,
+} from 'react-bootstrap';
 
 import { IAddedIngredient } from './ingredient';
-import { AddIngredient } from './ingredient';
 
 export interface IAddDrinkProps {
   name: string;
-  ingredients: IAddedIngredient[];
+  ingredients: JSX.Element[];
   steps: string;
   source: string;
   favorite: boolean;
@@ -22,67 +29,61 @@ export interface IAddDrinkProps {
 export const AddDrink: React.SFC<IAddDrinkProps> = (props: IAddDrinkProps) => {
   return (
     <div>
-      <h2>Add New Drink</h2>
-      Note to self: this component could also be used to modify existing drinks!
-      <div>
-        <label htmlFor="nameInput">
-          <input
+      <PageHeader>Add New Drink</PageHeader>
+      <form autoComplete="off">
+        <FormGroup controlId="drinkName">
+          <ControlLabel>Name</ControlLabel>
+          <FormControl
             type="text"
-            name="drinkName"
-            id="nameInput"
+            autoComplete="off"
             value={props.name}
-            onChange={e => props.handleNameInput(e.target.value)}
+            placeholder="Enter drink name"
+            onChange={e =>
+              props.handleNameInput((e.target as HTMLInputElement).value)
+            }
           />
-        </label>
+        </FormGroup>
+        <ControlLabel>Ingredients</ControlLabel>
         <ul>
-          {/* map existing ingredients, then add a +1 for inputting additional ingredients */}
-          {props.ingredients.map(ing => (
-            <li key={ing.id}>
-              <AddIngredient
-                {...ing}
-                saveIngredient={props.handleIngredientInput}
-                hasBeenSubmitted={true}
-              />
-            </li>
-          ))}
-          <li key={props.ingredients.length}>
-            <AddIngredient
-              name=""
-              quantity={0}
-              unit=""
-              saveIngredient={props.handleIngredientInput}
-              id={props.ingredients.length}
-              hasBeenSubmitted={false}
-            />
-          </li>
+          {props.ingredients.map(ing => <li key={ing.props.id}>{ing}</li>)}
         </ul>
-        <label htmlFor="instructionsInput">
-          Instructions:
-          <input
+        <FormGroup controlId="drinkInstructions">
+          <ControlLabel>Instructions</ControlLabel>
+          <FormControl
             type="text"
-            name="instructions"
-            id="instructionsInput"
+            autoComplete="off"
             value={props.steps}
-            onChange={e => props.handleInstructionInput(e.target.value)}
+            placeholder="Instructions for mixing drink"
+            onChange={e =>
+              props.handleInstructionInput((e.target as HTMLInputElement).value)
+            }
           />
-        </label>
-        <label htmlFor="sourceInput">
-          Source:
-          <input
+        </FormGroup>
+        <FormGroup controlId="drinkSource">
+          <ControlLabel>Source</ControlLabel>
+          <FormControl
             type="text"
-            name="source"
-            id="sourceInput"
+            autoComplete="off"
             value={props.source}
-            onChange={e => props.handleSourceInput(e.target.value)}
+            placeholder="Recipe source"
+            onChange={e =>
+              props.handleSourceInput((e.target as HTMLInputElement).value)
+            }
           />
-        </label>
-        <button type="submit" onClick={() => props.saveDrink()}>
-          Submit
-        </button>
-      </div>
-      {props.successfullyAdded && (
-        <div className="success">Added successfully!</div>
-      )}
+        </FormGroup>
+        <Button
+          type="submit"
+          bsStyle="primary"
+          onClick={() => props.saveDrink()}
+        >
+          Save
+        </Button>
+        {props.successfullyAdded && (
+          <Alert id="success" bsStyle="success">
+            Added successfully!
+          </Alert>
+        )}
+      </form>
     </div>
   );
 };

@@ -2,12 +2,13 @@ import * as React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
   Redirect,
   match,
 } from 'react-router-dom';
 import { Provider, observer } from 'mobx-react';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import { DrinkStore } from './stores/drinkStore';
 import {
@@ -27,25 +28,29 @@ interface IHomeProps {
 
 const Home: React.SFC<IHomeProps> = props => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/drinks">All Drinks</Link>
-          </li>
-          <li>
-            <Link to="/favorites">Favorites</Link>
-          </li>
-          <hr />
-          <li>
-            <Link to="/add">Add</Link>
-          </li>
-          <hr />
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className="container">
+      <Navbar collapseOnSelect={true}>
+        <Navbar.Header>
+          <Navbar.Brand>Cocktails</Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <LinkContainer to="/drinks">
+              <NavItem>Drinks</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/favorites">
+              <NavItem>Favorites</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/add">
+              <NavItem>Add</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/about">
+              <NavItem>About</NavItem>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
       <Switch>
         <Redirect exact={true} from={props.match.url} to="/drinks" />
         <Route

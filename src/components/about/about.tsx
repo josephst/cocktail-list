@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { PageHeader } from 'react-bootstrap';
 
 class AboutApp extends React.Component<{}, {}> {
   constructor(props: {}) {
@@ -9,12 +10,11 @@ class AboutApp extends React.Component<{}, {}> {
   render() {
     return (
       <div>
-        <div>
-          <h3>
-            App by <a href="https://josephstahl.com">Joseph Stahl</a>
-          </h3>
-        </div>
-        <div id="copyright">
+        <PageHeader>About</PageHeader>
+        <p className="lead">
+          App by <a href="https://josephstahl.com">Joseph Stahl</a>
+        </p>
+        <div id="copyright" className="small">
           <p>Copyright 2017 Joseph Stahl</p>
           <p>
             Permission is hereby granted, free of charge, to any person
