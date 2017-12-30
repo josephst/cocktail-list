@@ -1,11 +1,14 @@
+import { v4 as uuid } from 'node-uuid';
 import { Drink } from '../typings/drink';
 
 export const drink: Drink = {
-  id: 1,
+  get id() {
+    return uuid();
+  },
   default: true,
   dateCreated: '2017-07-20',
   hidden: false,
-  favorite: true,
+  favorite: false,
   name: 'Gin',
   ingredients: [
     {
@@ -30,6 +33,6 @@ export const drink: Drink = {
   steps: 'Testing',
 };
 
-export const makeDrink: (index: number) => Drink = i => {
-  return Object.assign({}, drink, { id: i });
+export const makeDrink: () => Drink = () => {
+  return Object.assign({}, drink);
 };

@@ -1,15 +1,17 @@
 import * as React from 'react';
 
-import { Drink, DrinkId } from '../../../typings/drink';
+import { Drink } from '../../../typings/drink';
+import { DrinkId } from '../../../models/DrinkModel';
 
-export interface DrinkCardProps {
-  toggleFavorite: (drinkId: DrinkId) => void;
+export interface IDrinkCardProps {
+  toggleFavorite: () => void;
   handleClick: (drinkId: DrinkId) => void;
+  deleteDrink: () => void;
   drink: Drink;
   expandedId?: DrinkId;
 }
 
-const DrinkCard: React.SFC<DrinkCardProps> = props => {
+const DrinkCard: React.SFC<IDrinkCardProps> = props => {
   const drink = props.drink;
   const titleBar = (
     <h2 onClick={() => props.handleClick(drink.id)}>{drink.name}</h2>
@@ -35,12 +37,14 @@ const DrinkCard: React.SFC<DrinkCardProps> = props => {
           {drink.steps}
           <div>Source: {drink.source}</div>
         </div>
-        <button
-          onClick={() => props.toggleFavorite(drink.id)}
-          id="favoriteButton"
-        >
+        <button onClick={() => props.toggleFavorite()} id="favoriteButton">
           {drink.favorite ? 'Remove Fave' : 'Add Fave'}
         </button>
+        {props.drink.default === false && (
+          <button onClick={() => props.deleteDrink()} id="deleteButton">
+            Delete
+          </button>
+        )}
       </div>
     );
   } else {

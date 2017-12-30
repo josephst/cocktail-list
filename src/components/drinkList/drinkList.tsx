@@ -1,20 +1,18 @@
 import * as React from 'react';
 
-import { DrinkCard } from './drinkCard';
+import { DrinkCardContainer } from './drinkCard';
+import { DrinkModel, DrinkId } from '../../models/DrinkModel';
 
-import { Drink, DrinkId } from '../../typings/drink';
-
-interface DrinkListProps {
-  toggleFavorite: (drinkId: number) => void;
-  drinks: Drink[];
+interface IDrinkListProps {
+  drinks: DrinkModel[];
 }
 
-interface DrinkListState {
+interface IDrinkListState {
   expanded?: DrinkId;
 }
 
-class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
-  constructor(props: DrinkListProps) {
+class DrinkList extends React.Component<IDrinkListProps, IDrinkListState> {
+  constructor(props: IDrinkListProps) {
     super(props);
     this.state = { expanded: undefined };
     this.handleClick = this.handleClick.bind(this);
@@ -37,9 +35,8 @@ class DrinkList extends React.Component<DrinkListProps, DrinkListState> {
         <ul>
           {this.props.drinks.map(drink => (
             <li key={drink.id}>
-              <DrinkCard
+              <DrinkCardContainer
                 drink={drink}
-                toggleFavorite={this.props.toggleFavorite}
                 expandedId={this.state.expanded}
                 handleClick={this.handleClick}
               />

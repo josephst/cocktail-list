@@ -6,11 +6,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
 
 import App from './App';
+import { DrinkStore } from './stores';
 import registerServiceWorker from './registerServiceWorker';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
+const drinkStore = new DrinkStore();
+
+ReactDOM.render(<App drinkStore={drinkStore} />, document.getElementById(
+  'root'
+) as HTMLElement);
 registerServiceWorker();

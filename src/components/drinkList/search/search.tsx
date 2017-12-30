@@ -1,19 +1,19 @@
 import * as React from 'react';
 import * as escapeStringRegexp from 'escape-string-regexp';
 
-interface SearchForDrinkProps {
+interface ISearchForDrinkProps {
   searchForDrink: (term: string) => void;
 }
 
-interface SearchForDrinkState {
+interface ISearchForDrinkState {
   term: string;
 }
 
 class SearchForDrink extends React.Component<
-  SearchForDrinkProps,
-  SearchForDrinkState
+  ISearchForDrinkProps,
+  ISearchForDrinkState
 > {
-  constructor(props: SearchForDrinkProps) {
+  constructor(props: ISearchForDrinkProps) {
     super(props);
     this.state = {
       term: '',

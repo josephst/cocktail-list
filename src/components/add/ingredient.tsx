@@ -2,29 +2,27 @@ import * as React from 'react';
 
 import { Ingredient } from '../../typings/drink';
 
-interface NewIngredientProps {
-  id: number;
-  saveIngredient: (ing: Ingredient, id: number) => void;
-  hasBeenSubmitted: boolean;
-
-  // in case of modifying existing ingredient
-  name?: string;
-  quantity?: number;
-  unit?: string;
-  source?: string;
+type IngredientID = number;
+export interface IAddedIngredient extends Ingredient {
+  id: IngredientID;
 }
 
-interface NewIngredientState {
+interface INewIngredientProps extends IAddedIngredient {
+  saveIngredient: (ing: IAddedIngredient) => void;
+  hasBeenSubmitted: boolean;
+}
+
+interface INewIngredientState {
   name: string;
   quantity: number;
   unit: string;
 }
 
 class AddIngredient extends React.Component<
-  NewIngredientProps,
-  NewIngredientState
+  INewIngredientProps,
+  INewIngredientState
 > {
-  constructor(props: NewIngredientProps) {
+  constructor(props: INewIngredientProps) {
     super(props);
     this.state = {
       name: this.props.name || '',
@@ -51,12 +49,13 @@ class AddIngredient extends React.Component<
 
   handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const ingredient: Ingredient = {
+    const ingredient: IAddedIngredient = {
+      id: this.props.id,
       name: this.state.name,
       quantity: this.state.quantity,
       unit: this.state.unit === '' ? undefined : this.state.unit,
     };
-    this.props.saveIngredient(ingredient, this.props.id);
+    this.props.saveIngredient(ingredient);
   }
 
   render() {
@@ -68,8 +67,12 @@ class AddIngredient extends React.Component<
             type="number"
             name="quantity"
             id="quantity"
-            value={this.state.quantity}
-            onChange={e => this.handleQuantity(Number.parseInt(e.target.value))}
+            value={this.state.quantity === 0 ? '' : this.state.quantity}
+            onChange={e =>
+              this.handleQuantity(
+                e.target.value === '' ? 0 : Number.parseInt(e.target.value)
+              )
+            }
           />
         </label>
         <select
