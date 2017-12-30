@@ -1,5 +1,5 @@
 import { observable, computed } from 'mobx';
-import { v4 as uuid } from 'node-uuid';
+import { v4 as uuid } from 'uuid';
 
 import { makeDrink } from '../fixtures/drink';
 
