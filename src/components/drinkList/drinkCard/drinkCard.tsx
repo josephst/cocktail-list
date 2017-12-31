@@ -2,7 +2,14 @@ import * as React from 'react';
 
 import { Drink } from '../../../typings/drink';
 import { DrinkId } from '../../../models/DrinkModel';
-import { Collapse, Badge, Glyphicon, Button } from 'react-bootstrap';
+import {
+  Collapse,
+  Badge,
+  Glyphicon,
+  Button,
+  ListGroup,
+  ListGroupItem,
+} from 'react-bootstrap';
 import { observer } from 'mobx-react';
 
 export interface IDrinkCardProps {
@@ -45,14 +52,14 @@ const DrinkCard: React.SFC<IDrinkCardProps> = observer(
               >
                 <div>{props.drink.details.category}</div>
                 <h4>Ingredients</h4>
-                <ul>
+                <ListGroup>
                   {props.drink.ingredients.map(ing => (
-                    <li key={ing.name}>
+                    <ListGroupItem key={ing.name}>
                       {ing.quantity === 0 ? '' : ing.quantity} {ing.unit || ''}{' '}
                       {ing.name}
-                    </li>
+                    </ListGroupItem>
                   ))}
-                </ul>
+                </ListGroup>
                 <hr />
                 <h4>Steps</h4>
                 {props.drink.steps}
