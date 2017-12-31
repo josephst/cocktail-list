@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PageHeader } from 'react-bootstrap';
+import { PageHeader, Well } from 'react-bootstrap';
 
 class AboutApp extends React.Component<{}, {}> {
   constructor(props: {}) {
@@ -14,7 +14,16 @@ class AboutApp extends React.Component<{}, {}> {
         <p className="lead">
           App by <a href="https://josephstahl.com">Joseph Stahl</a>
         </p>
-        <div id="copyright" className="small">
+        <div id="thanks">
+          <h3>Thanks to:</h3>
+          <small>Very much a work in progress</small>
+          <ul>
+            <li>
+              <a href="http://glyphicons.com/">glyphicons</a>
+            </li>
+          </ul>
+        </div>
+        <Well id="copyright" bsSize="small">
           <p>Copyright 2017 Joseph Stahl</p>
           <p>
             Permission is hereby granted, free of charge, to any person
@@ -37,16 +46,7 @@ class AboutApp extends React.Component<{}, {}> {
             CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
             SOFTWARE.
           </p>
-        </div>
-        <div id="thanks">
-          <h3>Thanks to:</h3>
-          <small>Very much a work in progress</small>
-          <ul>
-            <li>
-              <a href="http://glyphicons.com/">glyphicons</a>
-            </li>
-          </ul>
-        </div>
+        </Well>
       </div>
     );
   }

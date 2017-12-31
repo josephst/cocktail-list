@@ -1,88 +1,13 @@
 import * as React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  match,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider, observer } from 'mobx-react';
-import DevTools from 'mobx-react-devtools';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 
 import { DrinkStore } from './stores/drinkStore';
-import {
-  AboutApp,
-  AddDrinkContainer,
-  DrinkListContainer,
-  NotFound,
-} from './components';
+import { Home } from './routes';
 
 interface IAppProps {
   drinkStore: DrinkStore;
 }
-
-interface IHomeProps {
-  match: match<{}>;
-}
-
-// TODO: refactor AllDrinksPage and FavoriteDrinksPage into functions that return a component
-const AllDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
-  drinkStore,
-}) => {
-  return (
-    <DrinkListContainer displayFavorites={false} drinkStore={drinkStore} />
-  );
-};
-const FavoriteDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
-  drinkStore,
-}) => {
-  return <DrinkListContainer displayFavorites={true} drinkStore={drinkStore} />;
-};
-
-// TODO: separate into its own view. Views folder? Would be good to separate views (different URLs) and pages.
-const Home: React.SFC<IHomeProps> = props => {
-  return (
-    <div className="container">
-      <Navbar collapseOnSelect={true}>
-        <Navbar.Header>
-          <Navbar.Brand>Cocktails</Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-            <LinkContainer to="/drinks">
-              <NavItem>Drinks</NavItem>
-            </LinkContainer>
-            <LinkContainer to="/favorites">
-              <NavItem>Favorites</NavItem>
-            </LinkContainer>
-            <LinkContainer to="/add">
-              <NavItem>Add</NavItem>
-            </LinkContainer>
-            <LinkContainer to="/about">
-              <NavItem>About</NavItem>
-            </LinkContainer>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <Switch>
-        <Redirect exact={true} from={props.match.url} to="/drinks" />
-        <Route path={props.match.url + 'drinks'} component={AllDrinksPage} />
-        {/* TODO: rewrite favorites as a higher order component or something using nested routes? */}
-        <Route
-          path={props.match.url + 'favorites'}
-          component={FavoriteDrinksPage}
-        />
-        <Route path={props.match.url + 'add'} component={AddDrinkContainer} />
-        <Route path={props.match.url + 'about'} component={AboutApp} />
-        <Route component={NotFound} />
-      </Switch>
-      {process.env.NODE_ENV === 'development' && <DevTools />}
-    </div>
-  );
-};
 
 @observer
 class App extends React.Component<IAppProps, {}> {

@@ -11,7 +11,6 @@ import { DrinkModel } from '../../models/DrinkModel';
 
 interface IDrinkListRouteProps {
   drinkStore?: DrinkStore;
-  // match: match<{}>;
   displayFavorites: boolean;
 }
 
@@ -21,8 +20,8 @@ interface IDrinkListRouteState {
   searchRegExp: RegExp;
 }
 
-@inject((allStores: { drinkStore: DrinkStore }) => ({
-  drinkStore: allStores.drinkStore,
+@inject(allStores => ({
+  drinkStore: (allStores as { drinkStore: DrinkStore }).drinkStore,
 }))
 @observer
 class DrinkListContainer extends React.Component<
@@ -55,12 +54,7 @@ class DrinkListContainer extends React.Component<
     let drinksToDisplay: DrinkModel[];
     let pageTitle = 'All Drinks';
     // first, narrow down to favorites/ non-favorites
-    if (
-      this.props.drinkStore &&
-      // this.props.match &&
-      // this.props.match.path === '/favorites'
-      this.props.displayFavorites
-    ) {
+    if (this.props.drinkStore && this.props.displayFavorites) {
       // displaying favorites
       drinksToDisplay = this.props.drinkStore.favoriteDrinks || [];
       pageTitle = 'Favorite Drinks';

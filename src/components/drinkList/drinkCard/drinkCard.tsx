@@ -37,19 +37,17 @@ const DrinkCard: React.SFC<IDrinkCardProps> = observer(
         );
       }
       return (
-        <li className="list-group-item">
-          <h3
-            onClick={() => props.handleClickForExpansion(props.drink.id)}
-            className="drinkTitle"
-          >
+        <li
+          className="list-group-item"
+          onClick={() => props.handleClickForExpansion(props.drink.id)}
+        >
+          <h3 className="drinkTitle">
             {props.drink.name}
             {icons.length > 0 && <Badge pullRight={true}>{icons}</Badge>}
           </h3>
           <Collapse in={props.expanded}>
             <div>
-              <div
-                onClick={() => props.handleClickForExpansion(props.drink.id)}
-              >
+              <div>
                 <div>{props.drink.details.category}</div>
                 <h4>Ingredients</h4>
                 <ListGroup>
