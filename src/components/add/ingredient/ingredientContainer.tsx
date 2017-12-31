@@ -3,7 +3,7 @@ import * as React from 'react';
 import { EditIngredient, IEditIngredientProps } from './ingredient';
 import { Ingredient } from '../../../typings/drink';
 
-type IngredientID = number;
+type IngredientID = string; // UUID
 export interface IAddedIngredient extends Ingredient {
   id: IngredientID;
 }
@@ -15,7 +15,7 @@ interface IEditIngredientContainerProps extends IAddedIngredient {
   shouldAutofocus?: boolean;
 }
 
-interface IEditIngredientContainerState extends Ingredient {
+interface IEditIngredientContainerState extends IAddedIngredient {
   // name, type, quantity, unit from Ingredient
 }
 
@@ -26,6 +26,7 @@ export class IngredientContainer extends React.Component<
   constructor(props: IEditIngredientContainerProps) {
     super(props);
     this.state = {
+      id: this.props.id,
       name: this.props.name,
       quantity: this.props.quantity,
       unit: this.props.unit,

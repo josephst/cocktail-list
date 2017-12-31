@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { v4 as uuid } from 'uuid';
 import { inject, observer } from 'mobx-react';
 import { Button } from 'react-bootstrap';
 
@@ -34,10 +35,10 @@ export class AddDrinkContainer extends React.Component<
       name: '',
       ingredients: [
         {
-          id: 0,
           name: '',
           quantity: 0,
           unit: '',
+          id: uuid(),
         },
       ],
       steps: '',
@@ -62,14 +63,14 @@ export class AddDrinkContainer extends React.Component<
 
   handleDeleteIngredient = (deletedIng: IAddedIngredient) => {
     // don't empty array, just clear the last item
-    if (this.state.ingredients.length <= 1) {
+    if (this.state.ingredients.length === 1) {
       this.setState({
         ingredients: [
           {
-            id: 0,
             name: '',
             quantity: 0,
             unit: '',
+            id: uuid(),
           },
         ],
       });
@@ -90,10 +91,10 @@ export class AddDrinkContainer extends React.Component<
     this.setState({
       ingredients: this.state.ingredients.concat([
         {
-          id: this.state.ingredients.length,
           name: '',
           quantity: 0,
           unit: '',
+          id: uuid(),
         },
       ]),
     });
@@ -170,7 +171,7 @@ export class AddDrinkContainer extends React.Component<
           type=""
           unit=""
           handleIngredientInput={this.handleIngredientInput}
-          id={this.state.ingredients.length}
+          id={uuid()}
           hasBeenSubmitted={false}
           shouldAutofocus={this.state.ingredients.length > 0} // only focus if a previous ingredient has been added
         />
