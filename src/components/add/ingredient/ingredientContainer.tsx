@@ -8,11 +8,14 @@ export interface IAddedIngredient extends Ingredient {
   id: IngredientID;
 }
 
+export interface IPossibleUnit {
+  code: string; // stored in DB
+  name: string; // shown to user
+}
+
 interface IEditIngredientContainerProps extends IAddedIngredient {
   handleIngredientInput: (ing: IAddedIngredient) => void;
   handleDeleteIngredient?: (ing: IAddedIngredient) => void;
-  hasBeenSubmitted: boolean;
-  shouldAutofocus?: boolean;
 }
 
 interface IEditIngredientContainerState extends IAddedIngredient {
@@ -23,6 +26,12 @@ export class IngredientContainer extends React.Component<
   IEditIngredientContainerProps,
   IEditIngredientContainerState
 > {
+  static readonly possibleUnits: IPossibleUnit[] = [
+    { code: 'oz', name: 'oz.' },
+    { code: 'mL', name: 'mL.' },
+    { code: 'cL', name: 'cL.' },
+    { code: '', name: '' },
+  ];
   constructor(props: IEditIngredientContainerProps) {
     super(props);
     this.state = {
@@ -71,10 +80,7 @@ export class IngredientContainer extends React.Component<
       quantity,
       type,
       unit,
-
-      // UI vars
-      hasBeenSubmitted: this.props.hasBeenSubmitted,
-      shouldAutofocus: this.props.shouldAutofocus,
+      possibleUnits: IngredientContainer.possibleUnits,
     };
     return <EditIngredient {...props} />;
   }

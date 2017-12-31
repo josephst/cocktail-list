@@ -29,18 +29,18 @@ export class AddDrinkContainer extends React.Component<
   IAddDrinkContainerProps,
   IAddDrinkState
 > {
+  static createEmptyIngredient: () => IAddedIngredient = () => ({
+    id: uuid(),
+    name: '',
+    quantity: 0,
+    unit: '',
+  });
+
   constructor(props: IAddDrinkContainerProps) {
     super(props);
     this.state = {
       name: '',
-      ingredients: [
-        {
-          name: '',
-          quantity: 0,
-          unit: '',
-          id: uuid(),
-        },
-      ],
+      ingredients: [AddDrinkContainer.createEmptyIngredient()],
       steps: '',
       source: '',
       favorite: false,
@@ -65,14 +65,7 @@ export class AddDrinkContainer extends React.Component<
     // don't empty array, just clear the last item
     if (this.state.ingredients.length === 1) {
       this.setState({
-        ingredients: [
-          {
-            name: '',
-            quantity: 0,
-            unit: '',
-            id: uuid(),
-          },
-        ],
+        ingredients: [AddDrinkContainer.createEmptyIngredient()],
       });
     } else {
       // if we've >1 ingredient, clear the selected one
@@ -130,7 +123,7 @@ export class AddDrinkContainer extends React.Component<
         },
         favorite: this.state.favorite,
         hidden: false,
-        ingredients: this.state.ingredients,
+        ingredients: this.state.ingredients.filter(ing => ing.name !== ''),
         name: this.state.name,
         source: this.state.source,
         steps: this.state.steps,
@@ -157,26 +150,8 @@ export class AddDrinkContainer extends React.Component<
         {...ing}
         handleIngredientInput={this.handleIngredientInput}
         handleDeleteIngredient={this.handleDeleteIngredient}
-        hasBeenSubmitted={true}
-        shouldAutofocus={false}
       />
     ));
-    if (this.state.ingredients.length === 0) {
-      ingredientContainers.push(
-        // initially, provide an empty box for a new ingredient
-        // and focus it
-        <IngredientContainer
-          name=""
-          quantity={0}
-          type=""
-          unit=""
-          handleIngredientInput={this.handleIngredientInput}
-          id={uuid()}
-          hasBeenSubmitted={false}
-          shouldAutofocus={this.state.ingredients.length > 0} // only focus if a previous ingredient has been added
-        />
-      );
-    }
     const props: IAddDrinkProps = {
       favorite: this.state.favorite,
       ingredients: ingredientContainers,

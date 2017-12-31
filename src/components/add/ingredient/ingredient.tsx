@@ -9,6 +9,7 @@ import {
   Glyphicon,
 } from 'react-bootstrap';
 
+import { IPossibleUnit } from './ingredientContainer';
 import { Ingredient } from '../../../typings/drink';
 
 export interface IEditIngredientProps extends Ingredient {
@@ -16,9 +17,7 @@ export interface IEditIngredientProps extends Ingredient {
   handleUnitSelection: (unit: string) => void;
   handleName: (name: string) => void;
   handleDelete: () => void;
-  hasBeenSubmitted: boolean;
-  shouldAutofocus?: boolean; // whether the input should be selected
-  // (i.e. user just submitted previous ingredient and is now editing a new one)
+  possibleUnits: IPossibleUnit[];
 }
 
 export const EditIngredient: React.SFC<IEditIngredientProps> = props => {
@@ -30,8 +29,6 @@ export const EditIngredient: React.SFC<IEditIngredientProps> = props => {
             <ControlLabel>Quantity</ControlLabel>
             <FormControl
               type="number"
-              // autofocus new inputs
-              autoFocus={props.shouldAutofocus || false}
               value={props.quantity === 0 ? '' : props.quantity}
               onChange={e => {
                 const target = e.target as HTMLInputElement;
@@ -52,9 +49,11 @@ export const EditIngredient: React.SFC<IEditIngredientProps> = props => {
                 props.handleUnitSelection((e.target as HTMLInputElement).value)
               }
             >
-              <option value="oz">oz.</option>
-              <option value="cL">cL.</option>
-              <option value="" />
+              {props.possibleUnits.map(unit => (
+                <option key={unit.code} value={unit.code}>
+                  {unit.name}
+                </option>
+              ))}
             </FormControl>
           </FormGroup>
         </Col>
