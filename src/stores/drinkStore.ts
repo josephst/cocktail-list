@@ -1,15 +1,17 @@
-import { observable, computed } from 'mobx';
-import { v4 as uuid } from 'uuid';
+import { observable, computed, action } from 'mobx';
 
-import { makeDrink } from '../fixtures/drink';
+import { Drink } from '../typings/drink';
 
 import { DrinkModel } from '../models/DrinkModel';
+import { INetworkInterface } from '../controllers/TransportLayer';
 
 class DrinkStore {
   @observable public drinks: DrinkModel[] = [];
   @observable public isLoading = false;
+  private transportLayer: INetworkInterface;
 
-  constructor() {
+  constructor(transportLayer: INetworkInterface) {
+    this.transportLayer = transportLayer;
     this.loadDrinks();
   }
 
@@ -18,30 +20,32 @@ class DrinkStore {
     return this.drinks.filter(drink => drink.favorite);
   }
 
-  createNewDrink() {
-    const newDrinkModel = new DrinkModel(this); // let uuid be generated
-    this.drinks.push(newDrinkModel);
-    return newDrinkModel;
+  createDrink() {
+    const drink = new DrinkModel(this);
+    this.drinks.push(drink);
+    return drink;
   }
 
+  @action
   loadDrinks() {
     this.isLoading = true;
     // in future, this will load from server/ JSON
-    for (let i = 0; i < 7; i++) {
-      const drinkInfo = makeDrink();
-      const drinkModel = new DrinkModel(this, uuid());
-      drinkModel.updateFromJson(drinkInfo);
-      if (i % 2 === 0) {
-        // make some favorites
-        drinkModel.favorite = true;
-      }
-      if (i % 3 === 0) {
-        // make some appear user-added
-        drinkModel.default = false;
-      }
+    this.transportLayer.fetchDrinks().then(
+      action('fetchSuccess', (drinks: Drink[]) => {
+        drinks.forEach(drinkInfo => this.updateDrinkFromServer(drinkInfo));
+        this.isLoading = false;
+      })
+    );
+  }
+
+  @action
+  updateDrinkFromServer(drinkInfo: Drink) {
+    let drinkModel = this.drinks.find(d => d.id === drinkInfo.id);
+    if (!drinkModel) {
+      drinkModel = new DrinkModel(this, drinkInfo.id);
       this.drinks.push(drinkModel);
     }
-    this.isLoading = false;
+    drinkModel.updateFromJson(drinkInfo);
   }
 
   removeDrink(drink: DrinkModel) {

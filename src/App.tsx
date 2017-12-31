@@ -27,6 +27,7 @@ interface IHomeProps {
   match: match<{}>;
 }
 
+// TODO: refactor AllDrinksPage and FavoriteDrinksPage into functions that return a component
 const AllDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
   drinkStore,
 }) => {
@@ -40,6 +41,7 @@ const FavoriteDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
   return <DrinkListContainer displayFavorites={true} drinkStore={drinkStore} />;
 };
 
+// TODO: separate into its own view. Views folder? Would be good to separate views (different URLs) and pages.
 const Home: React.SFC<IHomeProps> = props => {
   return (
     <div className="container">
@@ -77,7 +79,7 @@ const Home: React.SFC<IHomeProps> = props => {
         <Route path={props.match.url + 'about'} component={AboutApp} />
         <Route component={NotFound} />
       </Switch>
-      <DevTools />
+      {process.env.NODE_ENV === 'development' && <DevTools />}
     </div>
   );
 };
@@ -86,7 +88,7 @@ const Home: React.SFC<IHomeProps> = props => {
 class App extends React.Component<IAppProps, {}> {
   render() {
     return (
-      <Provider drinkStore={new DrinkStore()}>
+      <Provider drinkStore={this.props.drinkStore}>
         <Router>
           <Route path="/" component={Home} />
         </Router>

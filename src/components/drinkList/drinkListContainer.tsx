@@ -80,11 +80,17 @@ class DrinkListContainer extends React.Component<
                 this.state.searchRegExp.test(ing.name.toLowerCase())
               ) !== -1
           );
-
+    const isLoading = this.props.drinkStore
+      ? this.props.drinkStore.isLoading
+      : false;
     return (
       <div>
         <SearchForDrink searchForDrink={this.handleSearchInput} />
-        <DrinkList drinks={drinksToDisplay} pageTitle={pageTitle} />
+        <DrinkList
+          drinks={drinksToDisplay}
+          pageTitle={pageTitle}
+          loading={isLoading}
+        />
       </div>
     );
   }

@@ -109,7 +109,7 @@ export class AddDrinkContainer extends React.Component<
   saveDrink = (e: React.MouseEvent<Button>) => {
     e.preventDefault();
     if (this.props.drinkStore) {
-      const newDrink = this.props.drinkStore.createNewDrink();
+      const newDrink = this.props.drinkStore.createDrink();
       const now = new Date();
       newDrink.updateFromJson({
         id: newDrink.id, // we're ignoring this, but TS requires that we have it

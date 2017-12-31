@@ -8,6 +8,7 @@ import { DrinkModel, DrinkId } from '../../models/DrinkModel';
 interface IDrinkListProps {
   drinks: DrinkModel[];
   pageTitle: string;
+  loading: boolean;
 }
 
 interface IDrinkListState {
@@ -37,16 +38,20 @@ class DrinkList extends React.Component<IDrinkListProps, IDrinkListState> {
     return (
       <div>
         <PageHeader>{this.props.pageTitle}</PageHeader>
-        <ListGroup>
-          {this.props.drinks.map(drink => (
-            <DrinkCardContainer
-              drink={drink}
-              key={drink.id}
-              expandedId={this.state.expandedDrinkId}
-              toggleExpansion={this.toggleExpansion}
-            />
-          ))}
-        </ListGroup>
+        {this.props.loading ? (
+          <div>Loading...</div>
+        ) : (
+          <ListGroup>
+            {this.props.drinks.map(drink => (
+              <DrinkCardContainer
+                drink={drink}
+                key={drink.id}
+                expandedId={this.state.expandedDrinkId}
+                toggleExpansion={this.toggleExpansion}
+              />
+            ))}
+          </ListGroup>
+        )}
       </div>
     );
   }
