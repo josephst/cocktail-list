@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
+import { Collapse } from 'react-bootstrap';
 
 import { DrinkCard } from './drinkCard';
 
@@ -13,9 +14,10 @@ it('renders without crashing', () => {
   const div = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
       deleteDrink={deleteFn}
+      expanded={true}
     />
   );
   expect(div.exists()).toBeTruthy();
@@ -29,13 +31,13 @@ it('shows a title', () => {
   const collapsed = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
-      expandedId={drink.id}
+      expanded={false}
       deleteDrink={deleteFn}
     />
   );
-  expect(collapsed.containsMatchingElement(<h2>{drink.name}</h2>)).toBeTruthy();
+  expect(collapsed.find('.drinkTitle')).toHaveLength(1);
 });
 
 it('shows a collapsed view', () => {
@@ -46,12 +48,13 @@ it('shows a collapsed view', () => {
   const collapsed = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
       deleteDrink={deleteFn}
+      expanded={false}
     />
   );
-  expect(collapsed.containsMatchingElement(<h3>Ingredients</h3>)).toBeFalsy();
+  expect(collapsed.find(Collapse).props().in).toBeFalsy();
 });
 
 it('shows an expanded view', () => {
@@ -62,13 +65,13 @@ it('shows an expanded view', () => {
   const expanded = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
-      expandedId={drink.id}
+      expanded={true}
       deleteDrink={deleteFn}
     />
   );
-  expect(expanded.containsMatchingElement(<h3>Ingredients</h3>)).toBeTruthy();
+  expect(expanded.find(Collapse).props().in).toBeTruthy();
 });
 
 it('toggles favorites', () => {
@@ -79,9 +82,9 @@ it('toggles favorites', () => {
   const expanded = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
-      expandedId={drink.id}
+      expanded={true}
       deleteDrink={deleteFn}
     />
   );
@@ -97,13 +100,14 @@ it('toggles expansion', () => {
   const collapsed = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
       deleteDrink={deleteFn}
+      expanded={false}
     />
   );
-  expect(collapsed.containsMatchingElement(<h3>Ingredients</h3>)).toBeFalsy();
-  collapsed.find('h2').simulate('click');
+  expect(collapsed.find(Collapse).props().in).toBeFalsy();
+  collapsed.find('.drinkTitle').simulate('click');
 
   // now expanded
   expect(expansionFn).toHaveBeenLastCalledWith(drink.id);
@@ -118,10 +122,10 @@ it('only shows the delete button on user-added drinks', () => {
   const expanded = enzyme.shallow(
     <DrinkCard
       drink={drink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
       deleteDrink={deleteFn}
-      expandedId={drink.id}
+      expanded={true}
     />
   );
   expect(expanded.find('#deleteButton')).toHaveLength(0);
@@ -132,10 +136,10 @@ it('only shows the delete button on user-added drinks', () => {
   const expandedUserAdded = enzyme.shallow(
     <DrinkCard
       drink={userDrink}
-      handleClick={expansionFn}
+      handleClickForExpansion={expansionFn}
       toggleFavorite={favoriteFn}
       deleteDrink={deleteFn}
-      expandedId={userDrink.id}
+      expanded={true}
     />
   );
   expect(expandedUserAdded.find('#deleteButton')).toHaveLength(1);

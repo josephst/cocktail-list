@@ -7,6 +7,7 @@ import {
   match,
 } from 'react-router-dom';
 import { Provider, observer } from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -25,6 +26,19 @@ interface IAppProps {
 interface IHomeProps {
   match: match<{}>;
 }
+
+const AllDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
+  drinkStore,
+}) => {
+  return (
+    <DrinkListContainer displayFavorites={false} drinkStore={drinkStore} />
+  );
+};
+const FavoriteDrinksPage: React.SFC<{ drinkStore: DrinkStore }> = ({
+  drinkStore,
+}) => {
+  return <DrinkListContainer displayFavorites={true} drinkStore={drinkStore} />;
+};
 
 const Home: React.SFC<IHomeProps> = props => {
   return (
@@ -53,19 +67,17 @@ const Home: React.SFC<IHomeProps> = props => {
       </Navbar>
       <Switch>
         <Redirect exact={true} from={props.match.url} to="/drinks" />
-        <Route
-          path={props.match.url + 'drinks'}
-          component={DrinkListContainer}
-        />
+        <Route path={props.match.url + 'drinks'} component={AllDrinksPage} />
         {/* TODO: rewrite favorites as a higher order component or something using nested routes? */}
         <Route
           path={props.match.url + 'favorites'}
-          component={DrinkListContainer}
+          component={FavoriteDrinksPage}
         />
         <Route path={props.match.url + 'add'} component={AddDrinkContainer} />
         <Route path={props.match.url + 'about'} component={AboutApp} />
         <Route component={NotFound} />
       </Switch>
+      <DevTools />
     </div>
   );
 };

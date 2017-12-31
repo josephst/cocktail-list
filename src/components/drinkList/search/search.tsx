@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as escapeStringRegexp from 'escape-string-regexp';
+import { Form, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 interface ISearchForDrinkProps {
   searchForDrink: (term: string) => void;
@@ -21,24 +22,26 @@ class SearchForDrink extends React.Component<
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(input: string) {
-    // TODO: debounce?
-    this.setState({ term: input });
-    this.props.searchForDrink(escapeStringRegexp(input));
+  handleChange(event: React.FormEvent<FormControl>) {
+    event.preventDefault();
+    const term = (event.target as HTMLInputElement).value;
+    this.setState({ term });
+    this.props.searchForDrink(escapeStringRegexp(term));
   }
 
   render() {
     return (
-      <div>
-        <label>
-          Search:
-          <input
+      <Form inline={true}>
+        <FormGroup controlId="search" bsSize="small">
+          <ControlLabel>Search</ControlLabel>{' '}
+          <FormControl
             type="text"
+            placeholder="Search"
             value={this.state.term}
-            onChange={event => this.handleChange(event.target.value)}
+            onChange={this.handleChange}
           />
-        </label>
-      </div>
+        </FormGroup>
+      </Form>
     );
   }
 }

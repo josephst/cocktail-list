@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { match } from 'react-router';
+// import { match } from 'react-router';
 import { inject, observer } from 'mobx-react';
 import * as escapeStringRegexp from 'escape-string-regexp';
-// import { sortBy } from 'lodash';
 
 import { DrinkList } from './drinkList';
 import { SearchForDrink } from './search';
@@ -12,7 +11,8 @@ import { DrinkModel } from '../../models/DrinkModel';
 
 interface IDrinkListRouteProps {
   drinkStore?: DrinkStore;
-  match: match<{}>;
+  // match: match<{}>;
+  displayFavorites: boolean;
 }
 
 interface IDrinkListRouteState {
@@ -39,18 +39,7 @@ class DrinkListContainer extends React.Component<
     this.handleSearchInput = this.handleSearchInput.bind(this);
   }
 
-  // TODO: remove and connect to MobX
   componentDidMount() {
-    // let drinks = [4, 3, 2, 1, 0].map(i => makeDrink(i)).map(
-    //   drink =>
-    //     (drink = {
-    //       ...drink,
-    //       favorite: Math.random() > 0.5,
-    //       name: `${drink.name}-${drink.id}`,
-    //     })
-    // );
-    // // alphabetical order
-    // drinks = sortBy(drinks, drink => drink.name);
     this.setState({
       searchedDrinks: this.props.drinkStore ? this.props.drinkStore.drinks : [],
       searchTerm: '',
@@ -58,7 +47,6 @@ class DrinkListContainer extends React.Component<
   }
 
   handleSearchInput(term: string) {
-    // TODO: debounce?
     const searchRegExp = new RegExp(escapeStringRegexp(term.toLowerCase()));
     this.setState({ searchTerm: term, searchRegExp });
   }
@@ -69,8 +57,9 @@ class DrinkListContainer extends React.Component<
     // first, narrow down to favorites/ non-favorites
     if (
       this.props.drinkStore &&
-      this.props.match &&
-      this.props.match.path === '/favorites'
+      // this.props.match &&
+      // this.props.match.path === '/favorites'
+      this.props.displayFavorites
     ) {
       // displaying favorites
       drinksToDisplay = this.props.drinkStore.favoriteDrinks || [];

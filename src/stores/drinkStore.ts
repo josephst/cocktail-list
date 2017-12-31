@@ -27,10 +27,18 @@ class DrinkStore {
   loadDrinks() {
     this.isLoading = true;
     // in future, this will load from server/ JSON
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 7; i++) {
       const drinkInfo = makeDrink();
       const drinkModel = new DrinkModel(this, uuid());
       drinkModel.updateFromJson(drinkInfo);
+      if (i % 2 === 0) {
+        // make some favorites
+        drinkModel.favorite = true;
+      }
+      if (i % 3 === 0) {
+        // make some appear user-added
+        drinkModel.default = false;
+      }
       this.drinks.push(drinkModel);
     }
     this.isLoading = false;

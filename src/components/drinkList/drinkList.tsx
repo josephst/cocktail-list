@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { observer } from 'mobx-react';
+import { PageHeader, ListGroup } from 'react-bootstrap';
 
 import { DrinkCardContainer } from './drinkCard';
 import { DrinkModel, DrinkId } from '../../models/DrinkModel';
-import { PageHeader } from 'react-bootstrap';
 
 interface IDrinkListProps {
   drinks: DrinkModel[];
@@ -10,24 +11,25 @@ interface IDrinkListProps {
 }
 
 interface IDrinkListState {
-  expanded?: DrinkId;
+  expandedDrinkId?: DrinkId;
 }
 
+@observer
 class DrinkList extends React.Component<IDrinkListProps, IDrinkListState> {
   constructor(props: IDrinkListProps) {
     super(props);
-    this.state = { expanded: undefined };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { expandedDrinkId: undefined };
+    this.toggleExpansion = this.toggleExpansion.bind(this);
   }
 
-  handleClick = (selectedId: DrinkId) => {
+  toggleExpansion = (selectedId: DrinkId) => {
     // expand or collsape drinks
-    if (selectedId === this.state.expanded) {
+    if (selectedId === this.state.expandedDrinkId) {
       // collapse if drink is selected after being expanded
-      this.setState({ expanded: undefined });
+      this.setState({ expandedDrinkId: undefined });
     } else {
       // else, set new selection as being expanded
-      this.setState({ expanded: selectedId });
+      this.setState({ expandedDrinkId: selectedId });
     }
   };
 
@@ -35,17 +37,16 @@ class DrinkList extends React.Component<IDrinkListProps, IDrinkListState> {
     return (
       <div>
         <PageHeader>{this.props.pageTitle}</PageHeader>
-        <ul>
+        <ListGroup>
           {this.props.drinks.map(drink => (
-            <li key={drink.id}>
-              <DrinkCardContainer
-                drink={drink}
-                expandedId={this.state.expanded}
-                handleClick={this.handleClick}
-              />
-            </li>
+            <DrinkCardContainer
+              drink={drink}
+              key={drink.id}
+              expandedId={this.state.expandedDrinkId}
+              toggleExpansion={this.toggleExpansion}
+            />
           ))}
-        </ul>
+        </ListGroup>
       </div>
     );
   }

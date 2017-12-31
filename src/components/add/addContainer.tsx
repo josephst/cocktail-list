@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import { DrinkStore } from '../../stores';
 import { AddDrink, IAddDrinkProps } from './add';
 import { IAddedIngredient, IngredientContainer } from './ingredient';
+import { action } from 'mobx';
 
 interface IAddDrinkContainerProps {
   drinkStore?: DrinkStore;
@@ -31,7 +32,14 @@ export class AddDrinkContainer extends React.Component<
     super(props);
     this.state = {
       name: '',
-      ingredients: [],
+      ingredients: [
+        {
+          id: 0,
+          name: '',
+          quantity: 0,
+          unit: '',
+        },
+      ],
       steps: '',
       source: '',
       favorite: false,
@@ -53,13 +61,28 @@ export class AddDrinkContainer extends React.Component<
   };
 
   handleDeleteIngredient = (deletedIng: IAddedIngredient) => {
-    const deletedIndex = this.state.ingredients.findIndex(
-      ing => ing.id === deletedIng.id
-    );
-    if (deletedIndex !== -1) {
-      const updatedIngredients = this.state.ingredients.slice();
-      updatedIngredients.splice(deletedIndex, 1);
-      this.setState({ ingredients: updatedIngredients });
+    // don't empty array, just clear the last item
+    if (this.state.ingredients.length <= 1) {
+      this.setState({
+        ingredients: [
+          {
+            id: 0,
+            name: '',
+            quantity: 0,
+            unit: '',
+          },
+        ],
+      });
+    } else {
+      // if we've >1 ingredient, clear the selected one
+      const deletedIndex = this.state.ingredients.findIndex(
+        ing => ing.id === deletedIng.id
+      );
+      if (deletedIndex !== -1) {
+        const updatedIngredients = this.state.ingredients.slice();
+        updatedIngredients.splice(deletedIndex, 1);
+        this.setState({ ingredients: updatedIngredients });
+      }
     }
   };
 
@@ -88,6 +111,7 @@ export class AddDrinkContainer extends React.Component<
     this.setState({ source });
   };
 
+  @action
   saveDrink = (e: React.MouseEvent<Button>) => {
     e.preventDefault();
     if (this.props.drinkStore) {
