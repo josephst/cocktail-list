@@ -38,6 +38,15 @@ class AboutApp extends React.Component<{}, {}> {
             SOFTWARE.
           </p>
         </div>
+        <div id="thanks">
+          <h3>Thanks to:</h3>
+          <small>Very much a work in progress</small>
+          <ul>
+            <li>
+              <a href="http://glyphicons.com/">glyphicons</a>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

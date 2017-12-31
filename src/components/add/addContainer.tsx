@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { inject, observer } from 'mobx-react';
+import { Button } from 'react-bootstrap';
 
 import { DrinkStore } from '../../stores';
 import { AddDrink, IAddDrinkProps } from './add';
@@ -43,12 +44,36 @@ export class AddDrinkContainer extends React.Component<
       ing => ing.id === updatedIng.id
     );
     if (ingredientIndex !== -1) {
-      const newIngredientList = this.state.ingredients.slice(0);
+      const newIngredientList = this.state.ingredients.slice();
       newIngredientList.splice(ingredientIndex, 1, updatedIng);
       this.setState({ ingredients: newIngredientList });
     } else {
       this.setState({ ingredients: this.state.ingredients.concat(updatedIng) });
     }
+  };
+
+  handleDeleteIngredient = (deletedIng: IAddedIngredient) => {
+    const deletedIndex = this.state.ingredients.findIndex(
+      ing => ing.id === deletedIng.id
+    );
+    if (deletedIndex !== -1) {
+      const updatedIngredients = this.state.ingredients.slice();
+      updatedIngredients.splice(deletedIndex, 1);
+      this.setState({ ingredients: updatedIngredients });
+    }
+  };
+
+  handleNewIngredientClick = () => {
+    this.setState({
+      ingredients: this.state.ingredients.concat([
+        {
+          id: this.state.ingredients.length,
+          name: '',
+          quantity: 0,
+          unit: '',
+        },
+      ]),
+    });
   };
 
   handleNameInput = (name: string) => {
@@ -63,7 +88,8 @@ export class AddDrinkContainer extends React.Component<
     this.setState({ source });
   };
 
-  saveDrink = () => {
+  saveDrink = (e: React.MouseEvent<Button>) => {
+    e.preventDefault();
     if (this.props.drinkStore) {
       const newDrink = this.props.drinkStore.createNewDrink();
       const now = new Date();
@@ -104,28 +130,38 @@ export class AddDrinkContainer extends React.Component<
     const ingredientContainers = this.state.ingredients.map(ing => (
       <IngredientContainer
         {...ing}
-        saveIngredient={this.handleIngredientInput}
+        handleIngredientInput={this.handleIngredientInput}
+        handleDeleteIngredient={this.handleDeleteIngredient}
         hasBeenSubmitted={true}
+        shouldAutofocus={false}
       />
     ));
-    ingredientContainers.push(
-      <IngredientContainer
-        name=""
-        quantity={0}
-        type=""
-        unit=""
-        saveIngredient={this.handleIngredientInput}
-        hasBeenSubmitted={false}
-        id={this.state.ingredients.length}
-      />
-    );
+    if (this.state.ingredients.length === 0) {
+      ingredientContainers.push(
+        // initially, provide an empty box for a new ingredient
+        // and focus it
+        <IngredientContainer
+          name=""
+          quantity={0}
+          type=""
+          unit=""
+          handleIngredientInput={this.handleIngredientInput}
+          id={this.state.ingredients.length}
+          hasBeenSubmitted={false}
+          shouldAutofocus={this.state.ingredients.length > 0} // only focus if a previous ingredient has been added
+        />
+      );
+    }
     const props: IAddDrinkProps = {
       favorite: this.state.favorite,
       ingredients: ingredientContainers,
       name: this.state.name,
       source: this.state.source,
       steps: this.state.steps,
+      // ingredient logic
       handleIngredientInput: this.handleIngredientInput,
+      handleNewIngredientClick: this.handleNewIngredientClick,
+      // other actions
       handleInstructionInput: this.handleInstructionInput,
       handleNameInput: this.handleNameInput,
       handleSourceInput: this.handleSourceInput,

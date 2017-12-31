@@ -18,9 +18,11 @@ it('renders without crashing', () => {
   const handleNameInput = jest.fn();
   const handleSourceInput = jest.fn();
   const handleIngredientInput = jest.fn();
+  const handleNewIngredientClick = jest.fn();
   const props: IAddDrinkProps = {
     handleInstructionInput,
     handleIngredientInput,
+    handleNewIngredientClick,
     handleNameInput,
     handleSourceInput,
     saveDrink,
@@ -36,16 +38,23 @@ it('shows a "successfully added message"', () => {
   const handleNameInput = jest.fn();
   const handleSourceInput = jest.fn();
   const handleIngredientInput = jest.fn();
+  const handleNewIngredientClick = jest.fn();
   const props: IAddDrinkProps = {
     handleInstructionInput,
     handleIngredientInput,
+    handleNewIngredientClick,
     handleNameInput,
     handleSourceInput,
     saveDrink,
     ...addDrinkProps,
   };
   const div = enzyme.shallow(<AddDrink {...props} />);
-  expect(div.find('#success')).toHaveLength(1);
+  expect(
+    div
+      .find('#success')
+      .parent()
+      .props().in
+  ).toBeTruthy();
 });
 
 it('does not show a "successfully added message" at first', () => {
@@ -54,9 +63,11 @@ it('does not show a "successfully added message" at first', () => {
   const handleNameInput = jest.fn();
   const handleSourceInput = jest.fn();
   const handleIngredientInput = jest.fn();
+  const handleNewIngredientClick = jest.fn();
   const props: IAddDrinkProps = {
     handleInstructionInput,
     handleIngredientInput,
+    handleNewIngredientClick,
     handleNameInput,
     handleSourceInput,
     saveDrink,
@@ -64,5 +75,10 @@ it('does not show a "successfully added message" at first', () => {
     successfullyAdded: false,
   };
   const div = enzyme.shallow(<AddDrink {...props} />);
-  expect(div.find('#success')).toHaveLength(0);
+  expect(
+    div
+      .find('#success')
+      .parent()
+      .props().in
+  ).toBeFalsy();
 });

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Button } from 'react-bootstrap';
 
 import { EditIngredient, IEditIngredientProps } from './ingredient';
 import { Ingredient } from '../../../typings/drink';
@@ -10,8 +9,10 @@ export interface IAddedIngredient extends Ingredient {
 }
 
 interface IEditIngredientContainerProps extends IAddedIngredient {
-  saveIngredient: (ing: IAddedIngredient) => void;
+  handleIngredientInput: (ing: IAddedIngredient) => void;
+  handleDeleteIngredient?: (ing: IAddedIngredient) => void;
   hasBeenSubmitted: boolean;
+  shouldAutofocus?: boolean;
 }
 
 interface IEditIngredientContainerState extends Ingredient {
@@ -25,51 +26,54 @@ export class IngredientContainer extends React.Component<
   constructor(props: IEditIngredientContainerProps) {
     super(props);
     this.state = {
-      name: this.props.name || '',
-      quantity: this.props.quantity || 0,
-      unit: this.props.unit || '',
+      name: this.props.name,
+      quantity: this.props.quantity,
+      unit: this.props.unit,
     };
-    this.handleQuantity = this.handleQuantity.bind(this);
-    this.handleUnitSelection = this.handleUnitSelection.bind(this);
-    this.handleName = this.handleName.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleQuantity(quantity: number) {
-    this.setState({ quantity });
-  }
+  handleQuantity = (quantity: number) => {
+    this.props.handleIngredientInput({ ...this.ingredientInfo, quantity });
+  };
 
-  handleUnitSelection(unit: string) {
-    this.setState({ unit });
-  }
+  handleUnitSelection = (unit: string) => {
+    this.props.handleIngredientInput({ ...this.ingredientInfo, unit });
+  };
 
-  handleName(name: string) {
-    this.setState({ name });
-  }
+  handleName = (name: string) => {
+    this.props.handleIngredientInput({ ...this.ingredientInfo, name });
+  };
 
-  handleSubmit(e: React.MouseEvent<Button>) {
-    e.preventDefault();
-    const ingredient: IAddedIngredient = {
+  handleDeleteIngredient = () => {
+    if (this.props.handleDeleteIngredient) {
+      this.props.handleDeleteIngredient(this.ingredientInfo);
+    }
+  };
+
+  get ingredientInfo(): IAddedIngredient {
+    return {
       id: this.props.id,
-      name: this.state.name,
-      quantity: this.state.quantity,
-      unit: this.state.unit === '' ? undefined : this.state.unit,
+      name: this.props.name,
+      quantity: this.props.quantity,
+      unit: this.props.unit === '' ? undefined : this.state.unit,
     };
-    this.props.saveIngredient(ingredient);
   }
 
   render() {
-    const { name, quantity, type, unit }: Ingredient = this.state;
+    const { name, quantity, type, unit }: Ingredient = this.props;
     const props: IEditIngredientProps = {
       handleName: this.handleName,
       handleQuantity: this.handleQuantity,
-      handleSubmit: this.handleSubmit,
       handleUnitSelection: this.handleUnitSelection,
-      hasBeenSubmitted: this.props.hasBeenSubmitted,
+      handleDelete: this.handleDeleteIngredient,
       name,
       quantity,
       type,
       unit,
+
+      // UI vars
+      hasBeenSubmitted: this.props.hasBeenSubmitted,
+      shouldAutofocus: this.props.shouldAutofocus,
     };
     return <EditIngredient {...props} />;
   }
