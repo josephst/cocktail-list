@@ -7,6 +7,10 @@ import { Drink, Ingredient } from '../typings/drink';
 
 export type DrinkId = string; // uuid
 
+/**
+ * DrinkModel is a class which holds both information about a drink (such as title)
+ * and methods for manipulating the drink within the MobX store.
+ */
 export class DrinkModel implements Drink {
   readonly store: DrinkStore;
   readonly id: DrinkId; // uuid, immutable

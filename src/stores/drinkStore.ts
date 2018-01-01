@@ -3,7 +3,7 @@ import { observable, computed, action } from 'mobx';
 import { Drink } from '../typings/drink';
 
 import { DrinkModel } from '../models/DrinkModel';
-import { INetworkInterface } from '../controllers/TransportLayer';
+import { INetworkInterface } from '../controllers';
 
 class DrinkStore {
   @observable public drinks: DrinkModel[] = [];
