@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Drink } from '../../../typings/drink';
+import { Drink } from '../../../models/drink';
 import { DrinkId } from '../../../models/DrinkModel';
 import {
   Collapse,

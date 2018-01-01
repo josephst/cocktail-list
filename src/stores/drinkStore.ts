@@ -1,6 +1,6 @@
 import { observable, computed, action } from 'mobx';
 
-import { Drink } from '../typings/drink';
+import { Drink } from '../models/drink';
 
 import { DrinkModel } from '../models/DrinkModel';
 import { INetworkInterface } from '../controllers';

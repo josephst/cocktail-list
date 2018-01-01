@@ -1,4 +1,4 @@
-import { Drink } from '../typings/drink';
+import { Drink } from '../models/drink';
 import { INetworkInterface } from '.';
 
 export class TransportLayer implements INetworkInterface {

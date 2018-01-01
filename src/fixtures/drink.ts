@@ -1,5 +1,5 @@
 import { v1 as uuid } from 'uuid';
-import { Drink } from '../typings/drink';
+import { Drink } from '../models/drink';
 
 export const drink: Drink = {
   get id() {

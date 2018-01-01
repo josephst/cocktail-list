@@ -3,7 +3,7 @@ import { v1 as uuid } from 'uuid';
 
 import { DrinkStore } from '../stores/drinkStore';
 
-import { Drink, Ingredient } from '../typings/drink';
+import { Drink, Ingredient } from '../models/drink';
 
 export type DrinkId = string; // uuid
 

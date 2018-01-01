@@ -1,7 +1,7 @@
 import { INetworkInterface } from '.';
 import { makeDrink } from '../fixtures/drink';
 
-import { Drink } from '../typings/drink';
+import { Drink } from '../models/drink';
 
 export class TestDrinkReceiver implements INetworkInterface {
   constructor() {
