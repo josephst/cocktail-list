@@ -9,12 +9,12 @@ import { SearchForDrink } from './search';
 import { DrinkStore } from '../../stores';
 import { DrinkModel } from '../../models/DrinkModel';
 
-interface IDrinkListRouteProps {
+export interface IDrinkListProps {
   drinkStore?: DrinkStore;
   displayFavorites: boolean;
 }
 
-interface IDrinkListRouteState {
+interface IDrinkListState {
   searchedDrinks: DrinkModel[];
   searchTerm: string;
   searchRegExp: RegExp;
@@ -25,10 +25,10 @@ interface IDrinkListRouteState {
 }))
 @observer
 class DrinkListContainer extends React.Component<
-  IDrinkListRouteProps,
-  IDrinkListRouteState
+  IDrinkListProps,
+  IDrinkListState
 > {
-  constructor(props: IDrinkListRouteProps) {
+  constructor(props: IDrinkListProps) {
     super(props);
     this.state = {
       searchedDrinks: [],

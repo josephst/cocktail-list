@@ -1,19 +1,14 @@
 import * as React from 'react';
 
 import { EditIngredient, IEditIngredientProps } from './ingredient';
-import { Ingredient } from '../../../typings/drink';
+import { Ingredient, IPossibleIngredientUnit } from '../../../typings/drink';
 
 type IngredientID = string; // UUID
 export interface IAddedIngredient extends Ingredient {
   id: IngredientID;
 }
 
-export interface IPossibleUnit {
-  code: string; // stored in DB
-  name: string; // shown to user
-}
-
-interface IEditIngredientContainerProps extends IAddedIngredient {
+export interface IEditIngredientContainerProps extends IAddedIngredient {
   handleIngredientInput: (ing: IAddedIngredient) => void;
   handleDeleteIngredient?: (ing: IAddedIngredient) => void;
 }
@@ -26,7 +21,7 @@ export class IngredientContainer extends React.Component<
   IEditIngredientContainerProps,
   IEditIngredientContainerState
 > {
-  static readonly possibleUnits: IPossibleUnit[] = [
+  static readonly possibleUnits: IPossibleIngredientUnit[] = [
     { code: 'oz', name: 'oz.' },
     { code: 'mL', name: 'mL.' },
     { code: 'cL', name: 'cL.' },

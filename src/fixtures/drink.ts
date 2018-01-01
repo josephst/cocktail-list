@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid';
+import { v1 as uuid } from 'uuid';
 import { Drink } from '../typings/drink';
 
 export const drink: Drink = {

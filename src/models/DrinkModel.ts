@@ -1,5 +1,5 @@
 import { observable } from 'mobx';
-import { v4 as uuid } from 'uuid';
+import { v1 as uuid } from 'uuid';
 
 import { DrinkStore } from '../stores/drinkStore';
 

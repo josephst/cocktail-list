@@ -5,7 +5,7 @@ import { PageHeader, ListGroup } from 'react-bootstrap';
 import { DrinkCardContainer } from './drinkCard';
 import { DrinkModel, DrinkId } from '../../models/DrinkModel';
 
-interface IDrinkListProps {
+export interface IDrinkListProps {
   drinks: DrinkModel[];
   pageTitle: string;
   loading: boolean;

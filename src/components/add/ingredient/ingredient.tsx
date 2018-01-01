@@ -9,15 +9,14 @@ import {
   Glyphicon,
 } from 'react-bootstrap';
 
-import { IPossibleUnit } from './ingredientContainer';
-import { Ingredient } from '../../../typings/drink';
+import { Ingredient, IPossibleIngredientUnit } from '../../../typings/drink';
 
 export interface IEditIngredientProps extends Ingredient {
   handleQuantity: (quantity: number) => void;
   handleUnitSelection: (unit: string) => void;
   handleName: (name: string) => void;
   handleDelete: () => void;
-  possibleUnits: IPossibleUnit[];
+  possibleUnits: IPossibleIngredientUnit[];
 }
 
 export const EditIngredient: React.SFC<IEditIngredientProps> = props => {

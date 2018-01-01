@@ -107,7 +107,7 @@ it('toggles expansion', () => {
     />
   );
   expect(collapsed.find(Collapse).props().in).toBeFalsy();
-  collapsed.find('.drinkTitle').simulate('click');
+  collapsed.find('li').simulate('click');
 
   // now expanded
   expect(expansionFn).toHaveBeenLastCalledWith(drink.id);

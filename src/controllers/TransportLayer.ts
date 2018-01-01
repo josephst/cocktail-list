@@ -1,8 +1,5 @@
 import { Drink } from '../typings/drink';
-
-export interface INetworkInterface {
-  fetchDrinks: () => Promise<Drink[]>;
-}
+import { INetworkInterface } from '.';
 
 export class TransportLayer implements INetworkInterface {
   constructor() {
