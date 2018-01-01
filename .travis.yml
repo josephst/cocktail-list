@@ -6,15 +6,15 @@ install: yarn install
 script:
 - echo "Running tests against $(node -v) ..."
 - yarn test
-before_deploy:
-- pip install urllib3[secure]
-- pip install awscli --upgrade --user
-- yarn build
-- chmod +x scripts/*.sh
-deploy:
-  provider: script
-  script: scripts/deploy.sh
-  skip_cleanup: true
-  on:
-    branch: master
-    node: 8
+# before_deploy:
+# - pip install urllib3[secure]
+# - pip install awscli --upgrade --user
+# - yarn build
+# - chmod +x scripts/*.sh
+# deploy:
+#   provider: script
+#   script: scripts/deploy.sh
+#   skip_cleanup: true
+#   on:
+#     branch: master
+#     node: 8
