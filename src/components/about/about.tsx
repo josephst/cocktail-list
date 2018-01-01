@@ -19,7 +19,10 @@ class AboutApp extends React.Component<{}, {}> {
           <small>Very much a work in progress</small>
           <ul>
             <li>
-              <a href="http://glyphicons.com/">glyphicons</a>
+              <a href="http://glyphicons.com/">glyphicons</a>: Icons
+            </li>
+            <li>
+              <a href="https://app.netlify.com/">Netlify</a>: Hosting
             </li>
           </ul>
         </div>
