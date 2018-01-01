@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { EditIngredient, IEditIngredientProps } from './ingredient';
-import { Ingredient, IPossibleIngredientUnit } from '../../../typings/drink';
+import { Ingredient, IPossibleIngredientUnit } from '../../../models/drink';
 
 type IngredientID = string; // UUID
 export interface IAddedIngredient extends Ingredient {

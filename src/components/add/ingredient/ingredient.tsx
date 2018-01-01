@@ -9,7 +9,7 @@ import {
   Glyphicon,
 } from 'react-bootstrap';
 
-import { Ingredient, IPossibleIngredientUnit } from '../../../typings/drink';
+import { Ingredient, IPossibleIngredientUnit } from '../../../models/drink';
 
 export interface IEditIngredientProps extends Ingredient {
   handleQuantity: (quantity: number) => void;
