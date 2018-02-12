@@ -62,7 +62,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "number"
+            "type": "string",
+            "description": "UUID for the drink"
           },
           "default": {
             "type": "boolean",

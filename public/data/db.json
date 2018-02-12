@@ -1,7 +1,7 @@
 {
   "drinks": [
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -11,7 +11,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1000,
+      "id": "6d2973d0-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -37,7 +37,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -47,7 +47,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1001,
+      "id": "6d2973d1-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Bacardi White Rum",
@@ -73,7 +73,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -83,7 +83,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1002,
+      "id": "6d2973d2-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -109,7 +109,7 @@
       "steps": "Build into old-fashioned glass filled with ice. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Orphans",
@@ -119,7 +119,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1003,
+      "id": "6d2973d3-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Kirsch",
@@ -145,7 +145,7 @@
       "steps": "Stir all ingredients with ice and strain into a cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Ancestrals",
@@ -155,7 +155,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1004,
+      "id": "6d2973d4-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Bourbon or rye whiskey",
@@ -184,10 +184,11 @@
       ],
       "name": "Old Fashioned",
       "source": "IBA Official Cocktail",
-      "steps": "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky."
+      "steps":
+        "Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -197,7 +198,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1005,
+      "id": "6d2973d5-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Old Tom Gin",
@@ -235,7 +236,7 @@
       "steps": "Stir all ingredients with ice and strain into cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -245,7 +246,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1006,
+      "id": "6d2973d6-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White Cuban Rum",
@@ -280,10 +281,11 @@
       ],
       "name": "Mojito",
       "source": "IBA Official Cocktail",
-      "steps": "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw."
+      "steps":
+        "Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -293,7 +295,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1007,
+      "id": "6d2973d7-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -316,10 +318,11 @@
       ],
       "name": "Horse's Neck",
       "source": "IBA Official Cocktail",
-      "steps": "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters."
+      "steps":
+        "Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -329,7 +332,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1008,
+      "id": "6d2973d8-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Dark rum",
@@ -376,10 +379,11 @@
       ],
       "name": "Planter's Punch",
       "source": "IBA Official Cocktail",
-      "steps": "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”."
+      "steps":
+        "Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -389,7 +393,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1009,
+      "id": "6d2973d9-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -415,7 +419,7 @@
       "steps": "Build all ingredients in a rock glass filled with ice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -425,7 +429,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1010,
+      "id": "6d2973da-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Pisco",
@@ -454,10 +458,11 @@
       ],
       "name": "Pisco Sour",
       "source": "IBA Official Cocktail",
-      "steps": "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top."
+      "steps":
+        "Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -467,7 +472,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1011,
+      "id": "6d299ae0-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Tequila",
@@ -520,10 +525,11 @@
       ],
       "name": "Long Island Iced Tea",
       "source": "IBA Official Cocktail",
-      "steps": "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw."
+      "steps":
+        "Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -533,7 +539,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1012,
+      "id": "6d299ae1-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -565,7 +571,7 @@
       "steps": "Shake with ice cubes. Strain into cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -575,7 +581,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1013,
+      "id": "6d299ae2-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -601,7 +607,7 @@
       "steps": "Shake with ice cubes. Strain into a cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -611,7 +617,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1014,
+      "id": "6d299ae3-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Champagne",
@@ -628,10 +634,11 @@
       ],
       "name": "Mimosa",
       "source": "IBA Official Cocktail",
-      "steps": "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink."
+      "steps":
+        "Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck’s Fizz and a Mimosa are the same drink."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -641,7 +648,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1015,
+      "id": "6d299ae4-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Bourbon whiskey",
@@ -664,10 +671,11 @@
       ],
       "name": "Whiskey Sour",
       "source": "IBA Official Cocktail",
-      "steps": "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice."
+      "steps":
+        "Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -677,7 +685,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1016,
+      "id": "6d299ae5-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -697,7 +705,7 @@
       "steps": "Build into a highball glass filled with ice. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -707,7 +715,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1017,
+      "id": "6d299ae6-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -733,7 +741,7 @@
       "steps": "Build all ingredients in a highball glass filled with ice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -743,7 +751,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1018,
+      "id": "6d299ae7-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Rye whiskey",
@@ -766,10 +774,11 @@
       ],
       "name": "Manhattan",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -779,7 +788,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1019,
+      "id": "6d299ae8-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -802,10 +811,11 @@
       ],
       "name": "Porto Flip",
       "source": "IBA Official Cocktail",
-      "steps": "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg."
+      "steps":
+        "Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -815,7 +825,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1020,
+      "id": "6d299ae9-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -844,10 +854,11 @@
       ],
       "name": "Gin Fizz",
       "source": "IBA Official Cocktail",
-      "steps": "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water."
+      "steps":
+        "Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Orphans",
@@ -857,7 +868,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1021,
+      "id": "6d299aea-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -872,7 +883,8 @@
           "unit": "cL"
         },
         {
-          "name": "Sugar syrup (according to individual preference of sweetness)",
+          "name":
+            "Sugar syrup (according to individual preference of sweetness)",
           "quantity": 0,
           "type": "Unknown",
           "unit": null
@@ -889,7 +901,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -899,7 +911,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1022,
+      "id": "6d299aeb-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Tequila",
@@ -922,10 +934,11 @@
       ],
       "name": "Margarita",
       "source": "IBA Official Cocktail",
-      "steps": "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe)."
+      "steps":
+        "Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe)."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -935,7 +948,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1023,
+      "id": "6d299aec-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -964,10 +977,11 @@
       ],
       "name": "French 75",
       "source": "IBA Official Cocktail",
-      "steps": "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently."
+      "steps":
+        "Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -977,7 +991,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1024,
+      "id": "6d299aed-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -1009,7 +1023,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -1019,7 +1033,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1025,
+      "id": "6d299aee-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -1042,10 +1056,11 @@
       ],
       "name": "Pina Colada",
       "source": "IBA Official Cocktail",
-      "steps": "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws."
+      "steps":
+        "Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Ancestrals",
@@ -1055,7 +1070,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1026,
+      "id": "6d299aef-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -1081,7 +1096,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -1091,7 +1106,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1027,
+      "id": "6d299af0-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Prosecco",
@@ -1108,10 +1123,11 @@
       ],
       "name": "Bellini",
       "source": "IBA Official Cocktail",
-      "steps": "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)"
+      "steps":
+        "Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)"
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1121,7 +1137,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1028,
+      "id": "6d29c1f0-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White Créme de Cacao",
@@ -1147,7 +1163,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1157,7 +1173,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1029,
+      "id": "6d29c1f1-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Tequila",
@@ -1180,10 +1196,11 @@
       ],
       "name": "Tequila Sunrise",
       "source": "IBA Official Cocktail",
-      "steps": "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir."
+      "steps":
+        "Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1193,7 +1210,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1030,
+      "id": "6d29c1f2-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -1219,7 +1236,7 @@
       "steps": "Shake and strain into a cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1229,7 +1246,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1031,
+      "id": "6d29c1f3-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Scotch whisky",
@@ -1249,7 +1266,7 @@
       "steps": "Build into old-fashioned glass filled with ice. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Layered Drinks and Shots",
@@ -1259,7 +1276,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1032,
+      "id": "6d29c1f4-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Kahlúa",
@@ -1282,10 +1299,11 @@
       ],
       "name": "B52",
       "source": "IBA Official Cocktail",
-      "steps": "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate."
+      "steps":
+        "Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1295,7 +1313,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1033,
+      "id": "6d29c1f5-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -1312,10 +1330,11 @@
       ],
       "name": "Stinger",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1325,7 +1344,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1034,
+      "id": "6d29c1f6-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Galliano",
@@ -1357,7 +1376,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1367,7 +1386,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1035,
+      "id": "6d29c1f7-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -1384,10 +1403,11 @@
       ],
       "name": "God Mother",
       "source": "IBA Official Cocktail",
-      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+      "steps":
+        "Build into old fashioned glass filled with ice cubes. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -1397,7 +1417,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1036,
+      "id": "6d29c1f8-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Prosecco",
@@ -1420,10 +1440,11 @@
       ],
       "name": "Spritz Veneziano",
       "source": "IBA Official Cocktail",
-      "steps": "Build into an old-fashioned glass filled with ice. Top with a splash of soda water."
+      "steps":
+        "Build into an old-fashioned glass filled with ice. Top with a splash of soda water."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Cobblers",
@@ -1433,7 +1454,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1037,
+      "id": "6d29c1f9-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -1462,10 +1483,11 @@
       ],
       "name": "Bramble",
       "source": "IBA Official Cocktail",
-      "steps": "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion."
+      "steps":
+        "Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1475,7 +1497,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1038,
+      "id": "6d29c1fa-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -1498,10 +1520,11 @@
       ],
       "name": "Alexander",
       "source": "IBA Official Cocktail",
-      "steps": "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg."
+      "steps":
+        "Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1511,7 +1534,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1039,
+      "id": "6d29c1fb-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Citron Vodka",
@@ -1534,10 +1557,11 @@
       ],
       "name": "Lemon Drop Martini",
       "source": "IBA Official Cocktail",
-      "steps": "Shake and strain into a chilled cocktail glass rimmed with sugar."
+      "steps":
+        "Shake and strain into a chilled cocktail glass rimmed with sugar."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1547,7 +1571,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1040,
+      "id": "6d29c1fc-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -1570,10 +1594,11 @@
       ],
       "name": "French Martini",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -1583,7 +1608,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1041,
+      "id": "6d29c1fd-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -1600,10 +1625,11 @@
       ],
       "name": "Black Russian",
       "source": "IBA Official Cocktail",
-      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently."
+      "steps":
+        "Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Savory",
@@ -1613,7 +1639,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1042,
+      "id": "6d29e900-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -1663,7 +1689,7 @@
       "steps": "Stir gently, pour all ingredients into highball glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -1673,7 +1699,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1043,
+      "id": "6d29e901-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -1711,7 +1737,7 @@
       "steps": "Shake and strain into highball glass. Serve with straw."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -1721,7 +1747,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1044,
+      "id": "6d29e902-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gold rum",
@@ -1759,7 +1785,7 @@
       "steps": "No instructions given"
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -1769,7 +1795,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1045,
+      "id": "6d29e903-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -1801,7 +1827,7 @@
       "steps": "Build all ingredients in a highball glass filled with ice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1811,7 +1837,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1046,
+      "id": "6d29e904-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -1843,7 +1869,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Juleps and Smashes",
@@ -1853,7 +1879,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1047,
+      "id": "6d29e905-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -1876,10 +1902,11 @@
       ],
       "name": "Derby",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into a cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -1889,7 +1916,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1048,
+      "id": "6d29e906-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -1915,7 +1942,7 @@
       "steps": "Shake with ice cubes. Strain into cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Hot Drinks",
@@ -1925,7 +1952,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1049,
+      "id": "6d29e907-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Irish whiskey",
@@ -1954,10 +1981,11 @@
       ],
       "name": "Irish Coffee",
       "source": "IBA Official Cocktail",
-      "steps": "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top."
+      "steps":
+        "Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Ancestrals",
@@ -1967,7 +1995,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1050,
+      "id": "6d29e908-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -1996,10 +2024,11 @@
       ],
       "name": "Sazerac",
       "source": "IBA Official Cocktail",
-      "steps": "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain."
+      "steps":
+        "Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -2009,7 +2038,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1051,
+      "id": "6d29e909-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Campari",
@@ -2032,10 +2061,11 @@
       ],
       "name": "Americano",
       "source": "IBA Official Cocktail",
-      "steps": "Build into old fashioned glass filled with ice cubes. Add a splash of soda water."
+      "steps":
+        "Build into old fashioned glass filled with ice cubes. Add a splash of soda water."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -2045,7 +2075,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1052,
+      "id": "6d29e90a-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -2101,7 +2131,7 @@
       "steps": "Shake with ice cubes. Strain into highball glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -2111,7 +2141,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1053,
+      "id": "6d29e90b-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cognac",
@@ -2128,10 +2158,11 @@
       ],
       "name": "French Connection",
       "source": "IBA Official Cocktail",
-      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+      "steps":
+        "Build into old fashioned glass filled with ice cubes. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -2141,7 +2172,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1054,
+      "id": "6d29e90c-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -2173,7 +2204,7 @@
       "steps": "Combine the vodka and ginger beer. Add lime juice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -2183,7 +2214,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1055,
+      "id": "6d29e90d-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -2212,10 +2243,11 @@
       ],
       "name": "John Collins",
       "source": "IBA Official Cocktail",
-      "steps": "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)"
+      "steps":
+        "Build into highball glass filled with ice. Stir gently. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)"
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Orphans",
@@ -2225,7 +2257,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1056,
+      "id": "6d29e90e-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Dry White Wine",
@@ -2242,10 +2274,11 @@
       ],
       "name": "Kir",
       "source": "IBA Official Cocktail",
-      "steps": "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine."
+      "steps":
+        "Pour Créme de Cassis into glass, top up with white wine. For Kir Royal: Use champagne instead of white wine."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Juleps and Smashes",
@@ -2255,7 +2288,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1057,
+      "id": "6d29e90f-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Bourbon whiskey",
@@ -2284,10 +2317,11 @@
       ],
       "name": "Mint Julep",
       "source": "IBA Official Cocktail",
-      "steps": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost."
+      "steps":
+        "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is frost."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2297,7 +2331,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1058,
+      "id": "6d29e910-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Tequila",
@@ -2323,7 +2357,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2333,7 +2367,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1059,
+      "id": "6d29e911-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -2359,7 +2393,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -2369,7 +2403,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1060,
+      "id": "6d29e912-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -2392,10 +2426,11 @@
       ],
       "name": "Dirty Martini",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into chilled martini glass."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into chilled martini glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -2405,7 +2440,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1061,
+      "id": "6d29e913-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Champagne",
@@ -2434,10 +2469,11 @@
       ],
       "name": "Champagne Cocktail",
       "source": "IBA Official Cocktail",
-      "steps": "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne."
+      "steps":
+        "Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Tropical Drinks",
@@ -2447,7 +2483,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1062,
+      "id": "6d29e914-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -2479,7 +2515,7 @@
       "steps": "Shake and strain into a chilled large cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2489,7 +2525,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1063,
+      "id": "6d29e915-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -2521,7 +2557,7 @@
       "steps": "Shake with ice cubes. Strain into a double cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -2531,7 +2567,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1064,
+      "id": "6d29e916-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Dark rum",
@@ -2548,10 +2584,11 @@
       ],
       "name": "Dark 'n' Stormy",
       "source": "IBA Official Cocktail",
-      "steps": "Build into highball glass filled with ice. Add rum first and top it with ginger beer."
+      "steps":
+        "Build into highball glass filled with ice. Add rum first and top it with ginger beer."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Highball, Collins, Fizzes",
@@ -2561,7 +2598,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1065,
+      "id": "6d2a1010-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -2620,10 +2657,11 @@
       ],
       "name": "Ramos Fizz",
       "source": "IBA Official Cocktail",
-      "steps": "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda."
+      "steps":
+        "Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Champagne",
@@ -2633,7 +2671,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1066,
+      "id": "6d2a1011-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -2662,10 +2700,11 @@
       ],
       "name": "Russian Spring Punch",
       "source": "IBA Official Cocktail",
-      "steps": "Shake the ingredients and pour into highball glass. Top with Sparkling wine."
+      "steps":
+        "Shake the ingredients and pour into highball glass. Top with Sparkling wine."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Duos and Trios",
@@ -2675,7 +2714,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1067,
+      "id": "6d2a1012-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Scotch whisky",
@@ -2692,10 +2731,11 @@
       ],
       "name": "God Father",
       "source": "IBA Official Cocktail",
-      "steps": "Build into old fashioned glass filled with ice cubes. Stir gently."
+      "steps":
+        "Build into old fashioned glass filled with ice cubes. Stir gently."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2705,7 +2745,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1068,
+      "id": "6d2a1013-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Citron Vodka",
@@ -2737,7 +2777,7 @@
       "steps": "Shake with ice cubes. Strain into a large cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Spirit Forward",
@@ -2747,7 +2787,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1069,
+      "id": "6d2a1014-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -2764,10 +2804,11 @@
       ],
       "name": "Dry Martini",
       "source": "IBA Official Cocktail",
-      "steps": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive."
+      "steps":
+        "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2777,7 +2818,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1070,
+      "id": "6d2a1015-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "White rum",
@@ -2809,7 +2850,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2819,7 +2860,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1071,
+      "id": "6d2a1016-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Old Tom Gin",
@@ -2851,7 +2892,7 @@
       "steps": "Shake with ice cubes. Strain into chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2861,7 +2902,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1072,
+      "id": "6d2a5e30-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Cachaca",
@@ -2884,10 +2925,11 @@
       ],
       "name": "Caipirinha",
       "source": "IBA Official Cocktail",
-      "steps": "Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)."
+      "steps":
+        "Place lime and sugar in old fashion glass and muddle. Fill glass with ice and Cachaca (note:Caipiroska- use Vodka instead of Cachaca)."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Savory",
@@ -2897,7 +2939,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1073,
+      "id": "6d2a5e31-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Silver Tequila",
@@ -2956,10 +2998,11 @@
       ],
       "name": "Vampiro",
       "source": "IBA Official Cocktail",
-      "steps": "Shake with ice cubes. Strain into a highball glass, filled with ice."
+      "steps":
+        "Shake with ice cubes. Strain into a highball glass, filled with ice."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -2969,7 +3012,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1074,
+      "id": "6d2a5e32-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -2995,7 +3038,7 @@
       "steps": "Shake and strain into a chilled cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -3005,7 +3048,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1075,
+      "id": "6d2a5e33-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Gin",
@@ -3031,7 +3074,7 @@
       "steps": "Shake with ice cubes. Strain into large cocktail glass."
     },
     {
-      "dateCreated": "2017-9-30",
+      "dateCreated": "2018-2-11",
       "default": true,
       "details": {
         "category": "Sours",
@@ -3041,7 +3084,7 @@
       },
       "favorite": false,
       "hidden": false,
-      "id": 1076,
+      "id": "6d2a5e34-0f9f-11e8-9533-3d4cdb397a35",
       "ingredients": [
         {
           "name": "Vodka",
@@ -3064,14 +3107,15 @@
       ],
       "name": "Harvey Wallbanger",
       "source": "IBA Official Cocktail",
-      "steps": "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top."
+      "steps":
+        "Build vodka and orange juice into a highball glass filled with ice. Stir gently and float Galliano on top."
     },
     {
-      "id": 1,
-      "default": false,
+      "id": "08df30b3-6137-43b5-bd69-a22a2f68bd8f",
+      "default": true,
       "dateCreated": "2017-07-20",
       "hidden": false,
-      "favorite": false,
+      "favorite": true,
       "name": "Gin and Tonic",
       "ingredients": [
         {
@@ -3106,11 +3150,12 @@
         "ice": "Cubes"
       },
       "source": "Self",
-      "steps": "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
+      "steps":
+        "Combine tonic and gin in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
     },
     {
-      "id": 2,
-      "default": false,
+      "id": "b2395580-bce1-4e17-92ac-9673e778993c",
+      "default": true,
       "dateCreated": "2017-08-26",
       "hidden": false,
       "favorite": true,
@@ -3148,7 +3193,8 @@
         "ice": "Cubes"
       },
       "source": "Self",
-      "steps": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
+      "steps":
+        "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Garnish with a lime wedge and serve."
     }
   ]
 }
