@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as escapeStringRegexp from 'escape-string-regexp';
+import escapeStringRegexp from 'escape-string-regexp';
 import { Form, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 interface ISearchForDrinkProps {

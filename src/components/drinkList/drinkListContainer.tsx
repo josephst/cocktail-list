@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import { match } from 'react-router';
 import { inject, observer } from 'mobx-react';
-import * as escapeStringRegexp from 'escape-string-regexp';
+import escapeStringRegexp from 'escape-string-regexp';
 
 import { DrinkList } from './drinkList';
 import { SearchForDrink } from './search';

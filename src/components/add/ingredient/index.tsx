@@ -1,2 +1,3 @@
 import { IngredientContainer, IAddedIngredient } from './ingredientContainer';
-export { IngredientContainer, IAddedIngredient };
+export { IngredientContainer };
+export type { IAddedIngredient }

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Navbar, NavItem, Nav, Glyphicon } from 'react-bootstrap';
 import { Switch, Redirect, Route, match } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
-import DevTools from 'mobx-react-devtools';
 
 import { AddDrink, DrinksPage, NotFound, About } from '../routes';
 
@@ -52,7 +51,6 @@ export const Home: React.SFC<IHomeProps> = props => {
         <Route path={props.match.url + 'about'} component={About} />
         <Route component={NotFound} />
       </Switch>
-      {process.env.NODE_ENV === 'development' && <DevTools />}
     </div>
   );
 };

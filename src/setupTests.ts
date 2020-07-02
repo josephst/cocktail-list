@@ -4,7 +4,7 @@ import * as raf from 'raf';
 // tslint:disable-next-line:no-any
 (raf as any).polyfill();
 
-import * as enzyme from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({ adapter: new Adapter() });

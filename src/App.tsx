@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider, observer } from 'mobx-react';
+import 'mobx-react/batchingForReactDom'
 
 import { DrinkStore } from './stores/drinkStore';
 import { Home } from './routes';

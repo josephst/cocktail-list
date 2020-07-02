@@ -16,21 +16,26 @@ export class DrinkModel implements Drink {
   readonly id: DrinkId; // uuid, immutable
 
   // drink props
-  @observable default: boolean;
-  @observable dateCreated: string;
-  @observable hidden: boolean;
-  @observable favorite: boolean;
-  @observable name: string;
-  @observable ingredients: Ingredient[];
-  @observable source: string;
+  @observable default: boolean = false;
+  @observable dateCreated: string = "today";
+  @observable hidden: boolean = false;
+  @observable favorite: boolean = false;
+  @observable name: string = "My New Drink";
+  @observable ingredients: Ingredient[] = [];
+  @observable source: string = "Unknown";
   @observable
   details: {
     category: string;
     color: string;
     glassType: string;
     ice: string; // type of ice that the drink is served with (chips, single cube, rocks, etc.)
+  } = {
+    category: "New Drink",
+    color: "Clear",
+    glassType: "Highball",
+    ice: "chips"
   };
-  @observable steps: string;
+  @observable steps: string = "Drink.";
 
   constructor(store: DrinkStore, id: string = uuid()) {
     this.store = store;
