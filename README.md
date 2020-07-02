@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/josephst/cocktail-list.svg?branch=master)](https://travis-ci.org/josephst/cocktail-list)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2333a94f-454f-4134-939e-793eca05e1a8/deploy-status)](https://app.netlify.com/sites/festive-allen-ae4c86/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
