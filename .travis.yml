@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-- "8"
-cache: yarn
-install: yarn install
+- "lts/*"
+install: npm ci
 script:
 - echo "Running tests against $(node -v) ..."
-- yarn test
+- npm test
 # before_deploy:
 # - pip install urllib3[secure]
 # - pip install awscli --upgrade --user
